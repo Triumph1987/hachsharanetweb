@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HachsharaNET" Class="hacDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=HachsharaNET;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HachsharaNETConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Assigns" Member="Assigns">
+    <Type Name="Assign">
+      <Column Name="CourseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SessionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SeekerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AssignDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="User_Assign" Member="User" ThisKey="UserID" OtherKey="ID" Type="User" IsForeignKey="true" />
+      <Association Name="CourseSession_Assign" Member="CourseSession" ThisKey="CourseID,SessionID" OtherKey="CourseID,SessionID" Type="CourseSession" IsForeignKey="true" />
+      <Association Name="JobSeeker_Assign" Member="JobSeeker" ThisKey="SeekerID" OtherKey="ID" Type="JobSeeker" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstituteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="User_Assign" Member="Assigns" ThisKey="ID" OtherKey="UserID" Type="Assign" />
+      <Association Name="User_JobSeeker" Member="JobSeekers" ThisKey="ID" OtherKey="ResponsibleUserID" Type="JobSeeker" />
+      <Association Name="Institute_User" Member="Institute" ThisKey="InstituteID" OtherKey="InstituteID" Type="Institute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseAnswers" Member="CourseAnswers">
+    <Type Name="CourseAnswer">
+      <Column Name="CourseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Answer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="JobSeeker_CourseAnswer" Member="JobSeeker" ThisKey="CourseID" OtherKey="ID" Type="JobSeeker" IsForeignKey="true" />
+      <Association Name="MatchingQuestion_CourseAnswer" Member="MatchingQuestion" ThisKey="QuestionID" OtherKey="qID" Type="MatchingQuestion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Courses" Member="Courses">
+    <Type Name="Course">
+      <Column Name="CourseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CourseName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ManagerFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ManagerLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstituteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Course_CourseSession" Member="CourseSessions" ThisKey="CourseID" OtherKey="CourseID" Type="CourseSession" />
+      <Association Name="Institute_Course" Member="Institute" ThisKey="InstituteID" OtherKey="InstituteID" Type="Institute" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseSessions" Member="CourseSessions">
+    <Type Name="CourseSession">
+      <Column Name="CourseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SessionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SessionNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaxNumOfParticipants" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinNumOfParticipants" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CourseSession_Assign" Member="Assigns" ThisKey="CourseID,SessionID" OtherKey="CourseID,SessionID" Type="Assign" />
+      <Association Name="Course_CourseSession" Member="Course" ThisKey="CourseID" OtherKey="CourseID" Type="Course" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Institute" Member="Institutes">
+    <Type Name="Institute">
+      <Column Name="InstituteID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Institute_User" Member="Users" ThisKey="InstituteID" OtherKey="InstituteID" Type="User" />
+      <Association Name="Institute_Course" Member="Courses" ThisKey="InstituteID" OtherKey="InstituteID" Type="Course" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobSeekers" Member="JobSeekers">
+    <Type Name="JobSeeker">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Street" Type="System.String" DbType="NVarChar(90)" CanBeNull="true" />
+      <Column Name="StreetNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RefusedCourse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ResponsibleUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="JobSeeker_Assign" Member="Assigns" ThisKey="ID" OtherKey="SeekerID" Type="Assign" />
+      <Association Name="JobSeeker_CourseAnswer" Member="CourseAnswers" ThisKey="ID" OtherKey="CourseID" Type="CourseAnswer" />
+      <Association Name="JobSeeker_JobSeekersAnswer" Member="JobSeekersAnswers" ThisKey="ID" OtherKey="SeekerID" Type="JobSeekersAnswer" />
+      <Association Name="User_JobSeeker" Member="User" ThisKey="ResponsibleUserID" OtherKey="ID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobSeekersAnswers" Member="JobSeekersAnswers">
+    <Type Name="JobSeekersAnswer">
+      <Column Name="SeekerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Answer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="JobSeeker_JobSeekersAnswer" Member="JobSeeker" ThisKey="SeekerID" OtherKey="ID" Type="JobSeeker" IsForeignKey="true" />
+      <Association Name="MatchingQuestion_JobSeekersAnswer" Member="MatchingQuestion" ThisKey="QuestionID" OtherKey="qID" Type="MatchingQuestion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MatchingQuestions" Member="MatchingQuestions">
+    <Type Name="MatchingQuestion">
+      <Column Name="qID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="QuestionType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="QuestionRelevance" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="MatchingQuestion_CourseAnswer" Member="CourseAnswers" ThisKey="qID" OtherKey="QuestionID" Type="CourseAnswer" />
+      <Association Name="MatchingQuestion_JobSeekersAnswer" Member="JobSeekersAnswers" ThisKey="qID" OtherKey="QuestionID" Type="JobSeekersAnswer" />
+      <Association Name="QuestionsType_MatchingQuestion" Member="QuestionsType" ThisKey="QuestionType" OtherKey="QuestionType" Type="QuestionsType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuestionsType" Member="QuestionsTypes">
+    <Type Name="QuestionsType">
+      <Column Name="QuestionType" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="QuestionsType_MatchingQuestion" Member="MatchingQuestions" ThisKey="QuestionType" OtherKey="QuestionType" Type="MatchingQuestion" />
+    </Type>
+  </Table>
+</Database>
