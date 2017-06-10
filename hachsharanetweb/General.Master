@@ -8,16 +8,13 @@
     <script src="jquery/jquery-3.2.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
 
-
     <asp:ContentPlaceHolder ID="head" runat="server">
         <title></title>
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
 
-         </asp:ContentPlaceHolder>
-                  <nav class="navbar navbar-default" dir="rtl">
+                  <nav class="navbar navbar-default" dir="rtl" overflow: hidden; style="width: 100%;">
   <div class="container-fluid">
     <div class="navbar-header">
            <a class="navbar-brand" href="#">
@@ -34,11 +31,9 @@
   </div>
      
     
-</nav>>
+</nav>
+    <div class="row" style="overflow:hidden;">
 
-
-    <div class="row">
-  <div>
        
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="main/css.css" rel="stylesheet" />
@@ -122,9 +117,13 @@
    
   </div>
   
-</div>
+
          </div>
-    
+    <div style="overflow: auto;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+
+         </asp:ContentPlaceHolder>
+    </div>
 <%--      <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
            <ul class="nav nav-pills nav-stacked">
             <li role="presentation" class="active"><a href="#">

@@ -70,6 +70,7 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
+    <Content Include="CreateUser.aspx" />
     <Content Include="main\csslogin.css" />
     <Content Include="Hachsharot.aspx" />
     <Content Include="Image\logosystem.PNG" />
@@ -104,6 +105,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="General.Master.cs">
       <DependentUpon>General.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,6 +147,9 @@
     <None Include="hac.dbml.layout">
       <DependentUpon>hac.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bootstrap\fonts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
