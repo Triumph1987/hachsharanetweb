@@ -10,7 +10,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     
-   <div class="container" >
+   <div class="container">
 <div class="row">
 <div class="col-md-10 ">
 <form class="form-horizontal">
@@ -41,13 +41,6 @@
   
 </div>
 
-<!-- File Button --> 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Upload photo">Upload photo</label>
-  <div class="col-md-4">
-    <input id="Upload photo" name="Upload photo" class="input-file" type="file">
-  </div>
-</div>
 
 <!-- Text input-->
 <div class="form-group">
@@ -99,39 +92,7 @@
   </div>
 </div>
 
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Gender">Gender</label>
-  <div class="col-md-4"> 
-    <label class="radio-inline" for="Gender-0">
-      <input type="radio" name="Gender" id="Gender-0" value="1" checked="checked">
-      Male
-    </label> 
-    <label class="radio-inline" for="Gender-1">
-      <input type="radio" name="Gender" id="Gender-1" value="2">
-      Female
-    </label> 
-    <label class="radio-inline" for="Gender-2">
-      <input type="radio" name="Gender" id="Gender-2" value="3">
-      Other
-    </label>
-  </div>
-</div>
 
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="radios">Marital Status:</label>
-  <div class="col-md-4"> 
-    <label class="radio-inline" for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-      Married
-    </label> 
-    <label class="radio-inline" for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
-      Unmarried
-    </label>
-  </div>
-</div>
 
 <!-- Text input-->
 <!-- <div class="form-group">
