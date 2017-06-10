@@ -71,6 +71,8 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
     <Content Include="CreateUser.aspx" />
+    <Content Include="Image\HACHSHARA.png" />
+    <Content Include="main\CreateUser.css" />
     <Content Include="main\csslogin.css" />
     <Content Include="Hachsharot.aspx" />
     <Content Include="Image\logosystem.PNG" />
