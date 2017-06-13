@@ -12,12 +12,12 @@
     
    <div class="container">
 <div class="row">
-<div class="col-md-10 ">
+<div class="col-md-9 ">
 <form class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
-<legend>User profile form requirement</legend>
+<legend dir="rtl";>יצירת משתמש</legend>
 
 <!-- Text input-->
 
@@ -433,10 +433,6 @@
 </fieldset>
 </form>
 </div>
-<div class="col-md-2 hidden-xs">
-<img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail ">
-  </div>
-
 
 </div>
    </div>
