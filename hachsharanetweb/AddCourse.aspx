@@ -1,23 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General.Master" AutoEventWireup="true" CodeBehind="CreateUser.aspx.cs" Inherits="hachsharanetweb.CreateUser" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General.Master" AutoEventWireup="true" CodeBehind="AddCourse.aspx.cs" Inherits="hachsharanetweb.AddCourse" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
-
-    <title>הכשרה.נט - יצירת משתמש</title>
+    <title>הכשרה.נט - יצירת קורס</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    
+       
    <div class="container">
 <div class="row">
 <div class="col-md-10 ">
-<form class="form-horizontal">
+<form class="form-horizontal" dir="rtl">
 <fieldset>
 
 <!-- Form Name -->
-<legend>User profile form requirement</legend>
+<legend dir="rtl">יצירת קורס</legend>
 
 <!-- Text input-->
 
@@ -25,14 +19,14 @@
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Name (Full name)">Name (Full name)</label>  
+  <label class="col-md-4 control-label" for="מזהה קורס">מזהה קורס</label>  
   <div class="col-md-4">
  <div class="input-group">
        <div class="input-group-addon">
         <i class="fa fa-user">
         </i>
        </div>
-       <input id="Name (Full name)" name="Name (Full name)" type="text" placeholder="Name (Full name)" class="form-control input-md"/>
+       <input id="Name (Full name)" name="Name (Full name)" type="text" placeholder="מזהה קורס" class="form-control input-md"/>
       </div>
 
     
@@ -40,7 +34,14 @@
 
   
 </div>
-
+    <div class="form-group">
+  <label class="col-md-4 control-label" ></label>  
+  <div class="col-md-4">
+  <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-thumbs-up"></span> Submit</a>
+  <a href="#" class="btn btn-danger" value=""><span class="glyphicon glyphicon-remove-sign"></span> Clear</a>
+    
+  </div>
+</div>
 
 <!-- Text input-->
 <div class="form-group">
@@ -440,7 +441,6 @@
 
 </div>
    </div>
-
 
 
 </asp:Content>
