@@ -17,35 +17,61 @@ namespace hachsharanetweb
   
             Div2.Visible = false;
             Div3.Visible = false;
-            Div4.Visible = false;
             Div5.Visible = false;
             Div6.Visible = false;
             Div7.Visible = false;
+            CreateButton.Visible = false;
+            SearchAgain.Visible = false;    
 
         }
 
 
         protected void Approve_Click(object sender, EventArgs e)
         {
-            var User = (from s in dc.Courses
-                        where s.CourseID == int.Parse(CourseIDText.Text)
-                        select s).FirstOrDefault();
-            if (User != null)
-            {
+            try {
+                var CourseD = (from s in dc.Courses
+                               where s.CourseID == int.Parse(CourseIDText.Text)
+                               select s).FirstOrDefault();
+                if (CourseD != null)
+                {
 
 
-                Div2.Visible = true;
-                Div3.Visible = true;
-                Div4.Visible = true;
-                Div5.Visible = true;
-                Div6.Visible = true;
-                Div7.Visible = true;
+                    Div2.Visible = true;
+                    Div3.Visible = true;
+                    Div5.Visible = true;
+                    Div6.Visible = true;
+                    Div7.Visible = true;
+                    CourseIDText.ReadOnly = true;
+                    CreateButton.Visible = true;
+                    SearchAgain.Visible = true;
+                    CourseNameText.Text =  CourseD.CourseName;
+                    SourceText.Text = CourseD.Source;
+                    FirstNameText.Text = CourseD.ManagerFirstName;
+                    LastNameText.Text = CourseD.ManagerLastName;
+                    InstitueIDText.Text = CourseD.Institute.Name;
 
+
+
+
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, GetType(), "שגיאת פרטים", "alert(\"לא קיים מזהה קורס עם מספר זה\");", true);
+                }
             }
-            else
+            catch
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "שגיאת פרטים", "alert(\"לא קיים מזהה קורס עם מספר זה\");", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "שגיאת פרטים", "אנא הזן מספר קורס\");", true);
             }
+            
+        }
+
+        protected void Clean_Click(object sender, EventArgs e)
+        {
+                CourseIDText.Text = string.Empty;
+            CourseIDText.ReadOnly = false;
+
+
         }
     }
 }

@@ -11,7 +11,7 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend dir="rtl">יצירת/ עדכון קורס</legend>
+<legend dir="rtl">פרטי קורס</legend>
 
 <!-- Text input-->
 
@@ -38,7 +38,7 @@
   <label class="col-md-4 control-label" ></label>  
   <div class="col-md-4">
       <asp:Button href="#" class="btn btn-success" ID="Approve" runat="server" Text="אשר" OnClick="Approve_Click" />
-      <asp:Button href="#" class="btn btn-danger" ID="Clean" runat="server" Text="נקה" />
+      <asp:Button href="#" class="btn btn-danger" ID="Clean" runat="server" Text="נקה" OnClick="Clean_Click" />
   
   </div>
 </div>
@@ -54,7 +54,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="CourseNameText" runat="server"  name="CourseNameText" type="text" placeholder="שם קורס" class="form-control input-md required" Visible="True"></asp:TextBox>
+    <asp:TextBox id="CourseNameText" runat="server"  name="CourseNameText" type="text" placeholder="שם קורס" class="form-control input-md required" Visible="True" Enabled="True" ReadOnly="True"></asp:TextBox>
       </div>
 
     
@@ -73,25 +73,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="SourceText" runat="server"  name="SourceText" type="text" placeholder="מקור קורס" class="form-control input-md"></asp:TextBox>
-      </div>
-
-    
-  </div>
-
-  
-</div>
-
-    
-<div runat="server" id="Div4" class="form-group">
-  <label class="col-md-4 control-label" for="ApprovedText">האם הקורס מאושר?</label>  
-  <div class="col-md-4">
- <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
-    <asp:TextBox id="ApprovedText" runat="server"  name="ApprovedText" type="text" placeholder="האם הקורס מאושר?" class="form-control input-md" Visible="True"></asp:TextBox>
+    <asp:TextBox id="SourceText" runat="server"  name="SourceText" type="text" placeholder="מקור קורס" class="form-control input-md" ReadOnly="True"></asp:TextBox>
       </div>
 
     
@@ -101,6 +83,7 @@
 </div>
 
     <div runat="server" id="Div5" class="form-group">
+        <p> פרטי איש קשר</p>
   <label class="col-md-4 control-label" for="FirstNameText">שם פרטי</label>  
   <div class="col-md-4">
  <div class="input-group">
@@ -108,7 +91,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="FirstNameText" runat="server"  name="FirstNameText" type="text" placeholder="שם פרטי" class="form-control input-md" Visible="True"></asp:TextBox>
+    <asp:TextBox id="FirstNameText" runat="server"  name="FirstNameText" type="text" placeholder="שם פרטי" class="form-control input-md" ReadOnly="True"></asp:TextBox>
       </div>
 
     
@@ -125,7 +108,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="LastNameText" runat="server"  name="LastNameText" type="text" placeholder="שם משפחה" class="form-control input-md" Visible="True"></asp:TextBox>
+    <asp:TextBox id="LastNameText" runat="server"  name="LastNameText" type="text" placeholder="שם משפחה" class="form-control input-md" Visible="True" ReadOnly="True"></asp:TextBox>
       </div>
 
     
@@ -135,17 +118,26 @@
 </div>
 
         <div runat="server" id="Div7" class="form-group">
-  <label class="col-md-4 control-label" for="InstitueIDText">מזהה מוסד</label>  
+  <label class="col-md-4 control-label" for="InstitueIDText">שם מוסד</label>  
   <div class="col-md-4">
  <div class="input-group">
        <div class="input-group-addon">
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="InstitueIDText" runat="server"  name="InstitueIDText" type="text" placeholder="מזהה מוסד" class="form-control input-md" Visible="True"></asp:TextBox>
+    <asp:TextBox id="InstitueIDText" runat="server"  name="InstitueIDText" type="text" placeholder="שם מוסד " class="form-control input-md" Visible="True" ReadOnly="True"></asp:TextBox>
       </div>
       </div>
             </div>
+
+        <div  class="form-group">
+  <label class="col-md-4 control-label" ></label>  
+  <div class="col-md-4">
+      <asp:Button href="#" class="btn btn-success" ID="CreateButton" runat="server" Text="עבור ליצירת מחזור" OnClick="Approve_Click" />
+      <asp:Button href="#" class="btn btn-danger" ID="SearchAgain" runat="server" Text="חיפוש קורס חדש" OnClick="Clean_Click" />
+  
+  </div>
+</div>
 </fieldset>
 </form>
 

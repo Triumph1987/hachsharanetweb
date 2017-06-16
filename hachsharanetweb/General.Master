@@ -4,6 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <script>
+
+    </script>
        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
     <script src="jquery/jquery-3.2.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
@@ -20,7 +23,7 @@
            <a class="navbar-brand" href="#">
         <img alt="Brand" style="height:39px; width:198px;" src="Image/HACHSHARA.PNG"/>
       </a>
-        <p class="navbar-text"><strong>שלום</strong> ניב ה.</p>
+        <p class="navbar-text"><strong>שלום</strong><span id="ShowName"></span></p>
         <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search"/>
@@ -55,10 +58,9 @@
                   <a href="#"> ניהול הכשרות <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="CourseMan">
-                           <li><a href="#">יצירת קורס</a></li>
+                           <li><a href="AddCourse.aspx">יצירת/עדכון פרטי קורס</a></li>
                     <li><a href="#">יצירת מחזור קורס</a></li>
-                    <li><a href="#">עדכון קורס</a></li>
-                    <li><a href="#">עדכון מחזור קורס</a></li>
+               <li><a href="#">עדכון מחזור קורס</a></li>
                     <li><a href="#">חיפוש קורסים/מחזורים</a></li>
                 </ul>
 
