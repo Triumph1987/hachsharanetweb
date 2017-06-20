@@ -73,12 +73,14 @@
     <Content Include="bootstrap\js\npm.js" />
     <Content Include="CreateUser.aspx" />
     <Content Include="Image\HACHSHARA.png" />
+    <Content Include="jquery\SearchJava.js" />
     <Content Include="main\csslogin.css" />
     <Content Include="Hachsharot.aspx" />
     <Content Include="Image\logosystem.PNG" />
     <Content Include="jquery\jquery-3.2.1.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="main\css.css" />
+    <Content Include="main\SearchCss.css" />
     <Content Include="packages.config" />
     <Content Include="General.Master" />
     <Content Include="bootstrap\css\bootstrap-theme.css.map" />
