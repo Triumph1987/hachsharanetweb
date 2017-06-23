@@ -33,12 +33,11 @@ namespace hachsharanetweb
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "SearchCourses";
                     int parsedValue;
-                    if (!int.TryParse(TextBox1.Text, out parsedValue))
+                    if (int.TryParse(TextBox1.Text, out parsedValue))
                     {
                         cmd.Parameters.Add("@CourseID", SqlDbType.Int).Value = parsedValue;
                     }
-                    cmd.Parameters.Add("@CourseName", SqlDbType.VarChar).Value = TextBox1.Text;
-
+                    cmd.Parameters.Add("@CourseName", SqlDbType.NVarChar).Value = '%' + TextBox1.Text + '%';
                  //   con.Open();
                  //   GridView2.EmptyDataText = "No Records Found";
                     GridView2.DataSource = cmd.ExecuteReader();
@@ -56,5 +55,26 @@ namespace hachsharanetweb
             //GridView2.DataSource = dt.DefaultView;
             //GridView2.DataBind();
         }
+
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "AddToCart")
+            {
+                // Retrieve the row index stored in the 
+                // CommandArgument property.
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                // Retrieve the row that contains the button 
+                // from the Rows collection.
+                GridViewRow row = GridView2.Rows[index];
+
+                Session["CourseNum"] = row.Cells[0];
+                Response.Redirect("AddCourse.aspx");
+            }
+
+        }
+
+
+
     }
 }

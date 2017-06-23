@@ -21,7 +21,14 @@ namespace hachsharanetweb
             Div6.Visible = false;
             Div7.Visible = false;
             CreateButton.Visible = false;
-            SearchAgain.Visible = false;    
+            SearchAgain.Visible = false;  
+            if (Session["CourseNum"] != null)
+            {
+                CourseIDText.Text = Session["CourseNum"].ToString();
+                Approve_Click(Approve, EventArgs.Empty);
+            }
+                    
+                     
 
         }
 
@@ -73,5 +80,8 @@ namespace hachsharanetweb
 
 
         }
+
+       
+
     }
 }

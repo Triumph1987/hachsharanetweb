@@ -1,33 +1,75 @@
-﻿#adv-search {
-    padding: 10px 0 0 0;
+﻿.mydatagrid
+{
+	width: 80%;
+	border: solid 2px black;
+	min-width: 80%;
+}
+.header
+{
+	background-color: #000;
+	font-family: Arial;
+	color: White;
+	height: 25px;
+	text-align: center;
+	font-size: 16px;
 }
 
-#adv-search .nlk-dropdown {
-    left: -220px;
+.rows
+{
+	background-color: #fff;
+	font-family: Arial;
+	font-size: 14px;
+	color: #000;
+	min-height: 25px;
+	text-align: left;
+}
+.rows:hover
+{
+	background-color: #5badff;
+	color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-    #adv-search {
-        width: 500px;
-        margin: 0 auto;
-    }
+.mydatagrid a /** FOR THE PAGING ICONS  **/
+{
+	background-color: Transparent;
+	padding: 5px 5px 5px 5px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
 }
 
-#nlk-search-submit {
-  width: 70px;
-  padding-left: 5px;
-  padding-right: 5px;  
+.mydatagrid a:hover /** FOR THE PAGING ICONS  HOVER STYLES**/
+{
+	background-color: #000;
+	color: #fff;
+}
+.mydatagrid span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/
+{
+	background-color: #fff;
+	color: #000;
+	padding: 5px 5px 5px 5px;
+}
+.pager
+{
+	background-color: #5badff;
+	font-family: Arial;
+	color: White;
+	height: 30px;
+	text-align: left;
 }
 
-#nlk-search-str {
-  min-width: 140px;
+.mydatagrid td
+{
+	padding: 5px;
 }
-
-.adv-search-target {
-    margin: 5px 0 0 0;
-    font-size: smaller;
+.mydatagrid th
+{
+	padding: 5px;
 }
-
-.dropdown-menu {
-    left:-118px;
+.centerediv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
