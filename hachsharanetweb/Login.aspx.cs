@@ -24,7 +24,8 @@ namespace hachsharanetweb
                         select s).FirstOrDefault();
             if (User != null)
             {
-                Response.Redirect("Hachsharot.aspx");
+                Session["UserName"] = User.FirstName.ToString();
+                Response.Redirect("HomePage.aspx");
             }
             else
             {

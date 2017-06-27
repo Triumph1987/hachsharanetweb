@@ -4,9 +4,25 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <script>
+    <script type="text/javascript">
+var tmonth=new Array("ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר");
 
-    </script>
+function GetClock(){
+var d=new Date();
+var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+
+var nhour=d.getHours(),nmin=d.getMinutes();
+if(nmin<=9) nmin="0"+nmin
+
+document.getElementById('clockbox').innerHTML=""+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+
        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
     <script src="jquery/jquery-3.2.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
@@ -18,19 +34,21 @@
 <body>
     <div dir="rtl" overflow: hidden; style="width: 100%;">
                   <nav class="navbar navbar-default" >
-  <div class="container-fluid">
+  <div class="container-fluid" style="float:right">
     <div class="navbar-header">
-           <a class="navbar-brand" href="#">
+           <a class="navbar-brand" href="/HomePage.aspx">
         <img alt="Brand" style="height:39px; width:198px;" src="Image/HACHSHARA.PNG"/>
       </a>
-        <p class="navbar-text"><strong>שלום</strong><span id="ShowName"></span></p>
+        <p class="navbar-text"><strong>שלום</strong> <asp:Label ID="showname" Text="" runat="server" /> </p>
        
     </div>
   </div>
-     
-    
+                <div id="clockbox" class="col-md-2" style="position: fixed;left: -44px;top: 20px;"></div>
+
 </nav>
+
         </div>
+     
     <div class="row" style="overflow:hidden;">
 
        
@@ -54,7 +72,7 @@
                 </li>
                 <ul class="sub-menu collapse" id="CourseMan">
                     <li><a href="#">יצירת מחזור קורס</a></li>
-                    <li><a href="#">חיפוש קורסים</a></li>
+                    <li><a href="/SearchCourses.aspx">חיפוש קורסים</a></li>
                     <li><a href="#">חיפוש מחזורים</a></li>
                 </ul>
 

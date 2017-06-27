@@ -11,7 +11,13 @@ namespace hachsharanetweb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!this.IsPostBack)
+            {
+                if (Session["UserName"] != null)
+                {
+                    this.showname.Text = string.Format( Session["UserName"].ToString());
+                }
+            }
         }
         
     }
