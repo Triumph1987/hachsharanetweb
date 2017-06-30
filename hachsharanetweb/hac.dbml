@@ -52,14 +52,16 @@
     <Type Name="CourseSession">
       <Column Name="CourseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SessionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="StartDate" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="EndDate" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SessionNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MaxNumOfParticipants" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MinNumOfParticipants" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="District" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SessionStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="CourseSession_Assign" Member="Assigns" ThisKey="CourseID,SessionID" OtherKey="CourseID,SessionID" Type="Assign" />
       <Association Name="Course_CourseSession" Member="Course" ThisKey="CourseID" OtherKey="CourseID" Type="Course" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Statuse_CourseSession" Member="Statuse" ThisKey="SessionStatus" OtherKey="Status" Type="Statuse" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Institute" Member="Institutes">
@@ -114,6 +116,12 @@
     <Type Name="QuestionsType">
       <Column Name="QuestionType" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="QuestionsType_MatchingQuestion" Member="MatchingQuestions" ThisKey="QuestionType" OtherKey="QuestionType" Type="MatchingQuestion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Statuses" Member="Statuses">
+    <Type Name="Statuse">
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Statuse_CourseSession" Member="CourseSessions" ThisKey="Status" OtherKey="SessionStatus" Type="CourseSession" />
     </Type>
   </Table>
 </Database>

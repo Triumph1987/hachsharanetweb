@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddCourse.aspx" />
+    <Content Include="AddSession.aspx" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="AddCourse.aspx.designer.cs">
       <DependentUpon>AddCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddSession.aspx.cs">
+      <DependentUpon>AddSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddSession.aspx.designer.cs">
+      <DependentUpon>AddSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="CreateUser.aspx.cs">

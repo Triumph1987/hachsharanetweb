@@ -60,6 +60,9 @@ namespace hachsharanetweb
     partial void InsertQuestionsType(QuestionsType instance);
     partial void UpdateQuestionsType(QuestionsType instance);
     partial void DeleteQuestionsType(QuestionsType instance);
+    partial void InsertStatuse(Statuse instance);
+    partial void UpdateStatuse(Statuse instance);
+    partial void DeleteStatuse(Statuse instance);
     #endregion
 		
 		public hacDataContext() : 
@@ -169,6 +172,14 @@ namespace hachsharanetweb
 			get
 			{
 				return this.GetTable<QuestionsType>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Statuse> Statuses
+		{
+			get
+			{
+				return this.GetTable<Statuse>();
 			}
 		}
 	}
@@ -1240,10 +1251,6 @@ namespace hachsharanetweb
 		
 		private int _SessionID;
 		
-		private System.Nullable<int> _StartDate;
-		
-		private System.Nullable<int> _EndDate;
-		
 		private string _SessionNAME;
 		
 		private System.Nullable<int> _MaxNumOfParticipants;
@@ -1252,9 +1259,17 @@ namespace hachsharanetweb
 		
 		private string _District;
 		
+		private System.Nullable<System.DateTime> _StartDate;
+		
+		private System.Nullable<System.DateTime> _EndDate;
+		
+		private string _SessionStatus;
+		
 		private EntitySet<Assign> _Assigns;
 		
 		private EntityRef<Course> _Course;
+		
+		private EntityRef<Statuse> _Statuse;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1264,10 +1279,6 @@ namespace hachsharanetweb
     partial void OnCourseIDChanged();
     partial void OnSessionIDChanging(int value);
     partial void OnSessionIDChanged();
-    partial void OnStartDateChanging(System.Nullable<int> value);
-    partial void OnStartDateChanged();
-    partial void OnEndDateChanging(System.Nullable<int> value);
-    partial void OnEndDateChanged();
     partial void OnSessionNAMEChanging(string value);
     partial void OnSessionNAMEChanged();
     partial void OnMaxNumOfParticipantsChanging(System.Nullable<int> value);
@@ -1276,12 +1287,19 @@ namespace hachsharanetweb
     partial void OnMinNumOfParticipantsChanged();
     partial void OnDistrictChanging(string value);
     partial void OnDistrictChanged();
+    partial void OnStartDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnStartDateChanged();
+    partial void OnEndDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnEndDateChanged();
+    partial void OnSessionStatusChanging(string value);
+    partial void OnSessionStatusChanged();
     #endregion
 		
 		public CourseSession()
 		{
 			this._Assigns = new EntitySet<Assign>(new Action<Assign>(this.attach_Assigns), new Action<Assign>(this.detach_Assigns));
 			this._Course = default(EntityRef<Course>);
+			this._Statuse = default(EntityRef<Statuse>);
 			OnCreated();
 		}
 		
@@ -1325,46 +1343,6 @@ namespace hachsharanetweb
 					this._SessionID = value;
 					this.SendPropertyChanged("SessionID");
 					this.OnSessionIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDate", DbType="Int")]
-		public System.Nullable<int> StartDate
-		{
-			get
-			{
-				return this._StartDate;
-			}
-			set
-			{
-				if ((this._StartDate != value))
-				{
-					this.OnStartDateChanging(value);
-					this.SendPropertyChanging();
-					this._StartDate = value;
-					this.SendPropertyChanged("StartDate");
-					this.OnStartDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndDate", DbType="Int")]
-		public System.Nullable<int> EndDate
-		{
-			get
-			{
-				return this._EndDate;
-			}
-			set
-			{
-				if ((this._EndDate != value))
-				{
-					this.OnEndDateChanging(value);
-					this.SendPropertyChanging();
-					this._EndDate = value;
-					this.SendPropertyChanged("EndDate");
-					this.OnEndDateChanged();
 				}
 			}
 		}
@@ -1449,6 +1427,70 @@ namespace hachsharanetweb
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDate", DbType="Date")]
+		public System.Nullable<System.DateTime> StartDate
+		{
+			get
+			{
+				return this._StartDate;
+			}
+			set
+			{
+				if ((this._StartDate != value))
+				{
+					this.OnStartDateChanging(value);
+					this.SendPropertyChanging();
+					this._StartDate = value;
+					this.SendPropertyChanged("StartDate");
+					this.OnStartDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndDate", DbType="Date")]
+		public System.Nullable<System.DateTime> EndDate
+		{
+			get
+			{
+				return this._EndDate;
+			}
+			set
+			{
+				if ((this._EndDate != value))
+				{
+					this.OnEndDateChanging(value);
+					this.SendPropertyChanging();
+					this._EndDate = value;
+					this.SendPropertyChanged("EndDate");
+					this.OnEndDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SessionStatus", DbType="NVarChar(50)")]
+		public string SessionStatus
+		{
+			get
+			{
+				return this._SessionStatus;
+			}
+			set
+			{
+				if ((this._SessionStatus != value))
+				{
+					if (this._Statuse.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSessionStatusChanging(value);
+					this.SendPropertyChanging();
+					this._SessionStatus = value;
+					this.SendPropertyChanged("SessionStatus");
+					this.OnSessionStatusChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CourseSession_Assign", Storage="_Assigns", ThisKey="CourseID,SessionID", OtherKey="CourseID,SessionID")]
 		public EntitySet<Assign> Assigns
 		{
@@ -1492,6 +1534,40 @@ namespace hachsharanetweb
 						this._CourseID = default(int);
 					}
 					this.SendPropertyChanged("Course");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Statuse_CourseSession", Storage="_Statuse", ThisKey="SessionStatus", OtherKey="Status", IsForeignKey=true)]
+		public Statuse Statuse
+		{
+			get
+			{
+				return this._Statuse.Entity;
+			}
+			set
+			{
+				Statuse previousValue = this._Statuse.Entity;
+				if (((previousValue != value) 
+							|| (this._Statuse.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Statuse.Entity = null;
+						previousValue.CourseSessions.Remove(this);
+					}
+					this._Statuse.Entity = value;
+					if ((value != null))
+					{
+						value.CourseSessions.Add(this);
+						this._SessionStatus = value.Status;
+					}
+					else
+					{
+						this._SessionStatus = default(string);
+					}
+					this.SendPropertyChanged("Statuse");
 				}
 			}
 		}
@@ -2632,6 +2708,96 @@ namespace hachsharanetweb
 		{
 			this.SendPropertyChanging();
 			entity.QuestionsType = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Statuses")]
+	public partial class Statuse : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Status;
+		
+		private EntitySet<CourseSession> _CourseSessions;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnStatusChanging(string value);
+    partial void OnStatusChanged();
+    #endregion
+		
+		public Statuse()
+		{
+			this._CourseSessions = new EntitySet<CourseSession>(new Action<CourseSession>(this.attach_CourseSessions), new Action<CourseSession>(this.detach_CourseSessions));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Statuse_CourseSession", Storage="_CourseSessions", ThisKey="Status", OtherKey="SessionStatus")]
+		public EntitySet<CourseSession> CourseSessions
+		{
+			get
+			{
+				return this._CourseSessions;
+			}
+			set
+			{
+				this._CourseSessions.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_CourseSessions(CourseSession entity)
+		{
+			this.SendPropertyChanging();
+			entity.Statuse = this;
+		}
+		
+		private void detach_CourseSessions(CourseSession entity)
+		{
+			this.SendPropertyChanging();
+			entity.Statuse = null;
 		}
 	}
 }
