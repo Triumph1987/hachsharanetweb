@@ -71,7 +71,7 @@ setInterval(GetClock,1000);
                   <a href="#"> ניהול הכשרות <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="CourseMan">
-                    <li><a href="#">יצירת מחזור קורס</a></li>
+                    <li><a href="/AddSession.aspx">יצירת מחזור קורס</a></li>
                     <li><a href="/SearchCourses.aspx">חיפוש קורסים</a></li>
                     <li><a href="#">חיפוש מחזורים</a></li>
                 </ul>

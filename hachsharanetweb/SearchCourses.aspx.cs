@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+
 namespace hachsharanetweb
 {
     public partial class SearchCourses : System.Web.UI.Page
@@ -58,6 +59,7 @@ namespace hachsharanetweb
 
         protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+
             if (e.CommandName == "AddToCart")
             {
                 // Retrieve the row index stored in the 
@@ -74,6 +76,7 @@ namespace hachsharanetweb
 
         }
 
+        
 
 
     }

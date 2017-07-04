@@ -4,23 +4,17 @@
     <title>הכשרה.נט - יצירת מחזור קורס</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-
+    <h1 class="page-head">יצירת מחזור קורס</h1>
     <div class="container">
 <div class="row">
 <div class="col-md-9 ">
 <form class="form-horizontal" dir="rtl" runat="server">
+
 <fieldset>
-
-<!-- Form Name -->
-<legend dir="rtl">יצירת מחזור קורס</legend>
-
-<!-- Text input-->
-
-
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="CourseIDText">מזהה קורס</label>  
+    <label class="col-md-4 control-label" for="CourseIDText">מזהה קורס</label>  
   <div class="col-md-4">
  <div class="input-group">
        <div class="input-group-addon">
@@ -61,7 +55,22 @@
   
   </div>
 </div>
+                <div runat="server" id="Div5" class="form-group">
+  <label class="col-md-4 control-label" for="InsIDText">שם מוסד הכשרה</label>  
+  <div class="col-md-4">
+ <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-user">
+        </i>
+       </div>
+    <asp:TextBox id="InsIDText" runat="server"  name="InsIDText" type="text" placeholder="שם מוסד הכשרה" class="form-control input-md" ></asp:TextBox>
+      </div>
 
+    
+  </div>
+
+  
+</div>
 <div runat="server" id="Div2" class="form-group">
   <label class="col-md-4 control-label" for="SessionIDText">מזהה מחזור</label>  
   <div class="col-md-4">
@@ -79,6 +88,7 @@
   
 </div>
 
+
     <div runat="server" id="Div3" class="form-group">
   <label class="col-md-4 control-label" for="SessionNameText">שם מחזור קורס</label>  
   <div class="col-md-4">
@@ -95,16 +105,17 @@
 
   
 </div>
+
     
     <div runat="server" id="Div4" class="form-group">
-  <label class="col-md-4 control-label" for="DistrictText">מחוז</label>  
+  <label class="col-md-4 control-label" for="DistrictText">אזור</label>  
   <div class="col-md-4">
  <div class="input-group">
        <div class="input-group-addon">
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="DistrictText" runat="server"  name="DistrictText" type="text" placeholder="מחוז" class="form-control input-md" ></asp:TextBox>
+    <asp:TextBox id="DistrictText" runat="server"  name="DistrictText" type="text" placeholder="אזור" class="form-control input-md" ></asp:TextBox>
       </div>
 
     
@@ -113,22 +124,7 @@
   
 </div>
 
-        <div runat="server" id="Div5" class="form-group">
-  <label class="col-md-4 control-label" for="InsIDText">שם מוסד הכשרה</label>  
-  <div class="col-md-4">
- <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
-    <asp:TextBox id="InsIDText" runat="server"  name="InsIDText" type="text" placeholder="שם מוסד הכשרה" class="form-control input-md" ></asp:TextBox>
-      </div>
 
-    
-  </div>
-
-  
-</div>
 
         <div runat="server" id="Div6" class="form-group">
   <label class="col-md-4 control-label" for="SessionStatusText">סטטוס קורס</label>  
@@ -138,8 +134,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-     <br />
-     <asp:DropDownList ID="SessionStatusText" runat="server" DataSourceID="SqlDataSource1" DataTextField="Status" DataValueField="Status"></asp:DropDownList>
+     <asp:DropDownList ID="SessionStatusText" runat="server" DataSourceID="SqlDataSource1" DataTextField="Status" DataValueField="Status" class="form-control input-md"></asp:DropDownList>
        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HachsharaNETConnectionString %>" SelectCommand="SELECT [Status] FROM [Statuses]"></asp:SqlDataSource>
      <br />
     <%--<asp:TextBox id="SessionStatusText" runat="server"  name="SessionStatusText" type="text" placeholder="סטטוס קורס" class="form-control input-md"></asp:TextBox>--%>

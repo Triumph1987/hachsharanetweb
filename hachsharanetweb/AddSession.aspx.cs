@@ -50,6 +50,7 @@ namespace hachsharanetweb
                     Div1.Visible = true;
                     Div2.Visible = true;
                     Div3.Visible = true;
+                    Div4.Visible = true;
                     Div5.Visible = true;
                     Div6.Visible = true;
                     Div7.Visible = true;
@@ -76,7 +77,7 @@ namespace hachsharanetweb
                     }
                     else
                     {
-                        SessionIDText.Text = SessionD.SessionID.ToString();
+                        SessionIDText.Text = (SessionD.SessionID+1).ToString();
                     }
 
 
@@ -102,7 +103,7 @@ namespace hachsharanetweb
 
         protected void Create_Click(object sender, EventArgs e)
         {
-            string cmdString = "INSERT INTO CourseSessions (CourseID,SessionID,StartDate,EndDate,SessionNAME,MaxNumOfParticipants,MinNumOfParticipants,District,SessionStatus) VALUES (@val1, @va2, @val3, @val4, @val5 ,@val6, @val7, @val8, @val9)";
+            string cmdString = "INSERT INTO CourseSessions (CourseID,SessionID,StartDate,EndDate,SessionNAME,MaxNumOfParticipants,MinNumOfParticipants,District,SessionStatus) VALUES (@val1, @val2, @val3, @val4, @val5 ,@val6, @val7, @val8, @val9)";
             string connString = Connection.ConnectionString;
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -111,15 +112,15 @@ namespace hachsharanetweb
                    
                    // conn.Connectio n = conn;
                     //comm.CommandText = cmdString;
-                    comm.Parameters.AddWithValue("@val1", int.Parse(CourseIDText.Text));
-                    comm.Parameters.AddWithValue("@val2", int.Parse(SessionIDText.Text));
-                    comm.Parameters.AddWithValue("@val3", DateTime.Parse(StartDateText.Text));
-                    comm.Parameters.AddWithValue("@val4", DateTime.Parse(EndDateText.Text));
-                    comm.Parameters.AddWithValue("@val5", SessionNameText.Text);
-                    comm.Parameters.AddWithValue("@val6", int.Parse(MaxParticipText.Text));
-                    comm.Parameters.AddWithValue("@val7", int.Parse(MinParticipText.Text));
-                    comm.Parameters.AddWithValue("@val8", DistrictText.Text);
-                    comm.Parameters.AddWithValue("@val9", SessionStatusText.Text);
+                    comm.Parameters.Add("@val1", SqlDbType.Int).Value = int.Parse(CourseIDText.Text);
+                    comm.Parameters.Add("@val2", SqlDbType.Int).Value= int.Parse(SessionIDText.Text);
+                    comm.Parameters.Add("@val3", SqlDbType.DateTime).Value = DateTime.Parse(StartDateText.Text);
+                    comm.Parameters.Add("@val4", SqlDbType.DateTime).Value = DateTime.Parse(EndDateText.Text);
+                    comm.Parameters.Add("@val5", SqlDbType.NVarChar).Value = SessionNameText.Text;
+                    comm.Parameters.Add("@val6", SqlDbType.Int).Value = int.Parse(MaxParticipText.Text);
+                    comm.Parameters.Add("@val7", SqlDbType.Int).Value = int.Parse(MinParticipText.Text);
+                    comm.Parameters.Add("@val8", SqlDbType.NVarChar).Value = DistrictText.Text;
+                    comm.Parameters.Add("@val9", SqlDbType.NVarChar).Value = SessionStatusText.Text;
                     try
                     {
                         conn.Open();

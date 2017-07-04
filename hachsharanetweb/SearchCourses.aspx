@@ -87,7 +87,7 @@
 
     <form id="form1" runat="server">
 
-    <h1>חיפוש קורסים</h1>
+    <h1 class="page-head">חיפוש קורסים</h1>
         <div class="row">
 
   <div class="col-lg-4" style="left: 35%;right: 50%;">

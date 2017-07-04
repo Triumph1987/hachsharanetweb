@@ -11,7 +11,7 @@
     color: #2B317A;
     direction:rtl;
     padding-right:20px;
-        position: fixed;
+    position: fixed;
     right: 3px;
     top: 62px;
 }
@@ -161,4 +161,7 @@
   color: #333;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
+       position: relative;
+     right: 18px;
+     top: -27px;
 }
