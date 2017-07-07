@@ -1,10 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General.Master" AutoEventWireup="true" CodeBehind="AddSession.aspx.cs" Inherits="hachsharanetweb.AddSession" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+  
     <title>הכשרה.נט - יצירת מחזור קורס</title>
-</asp:Content>
+        <script>
+$(function() {
+    $( "#<%= StartDateText.ClientID %>" ).datepicker();
+});
+</script>
+
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <h1 class="page-head">יצירת מחזור קורס</h1>
+
+      <h1 class="page-head">יצירת מחזור קורס</h1>
     <div class="container">
 <div class="row">
 <div class="col-md-9 ">
@@ -156,7 +163,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="StartDateText" runat="server"  name="StartDateText" type="date" placeholder=",תאריך התחלה" class="form-control input-md" Visible="True"></asp:TextBox>
+    <asp:TextBox id="StartDateText" runat="server"  name="StartDateText"  type="text" placeholder="תאריך התחלה" class="form-control input-md" Visible="True"></asp:TextBox>
       </div>
 
     
@@ -224,4 +231,7 @@
 
 </div>
    </div>
+
+           
+
 </asp:Content>

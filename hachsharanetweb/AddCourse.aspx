@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General.Master" AutoEventWireup="true" CodeBehind="AddCourse.aspx.cs" Inherits="hachsharanetweb.AddCourse" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>הכשרה.נט - יצירת/ עדכון קורס</title>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
        
