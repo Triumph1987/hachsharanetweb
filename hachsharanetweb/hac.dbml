@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HachsharaNET" Class="hacDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=HachsharaNET;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HachsharaNETConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=hachsharanet.ccsgujpsbgon.eu-central-1.rds.amazonaws.com;Initial Catalog=HachsharaNET;User ID=DBhachshara" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HachsharaNETConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Assigns" Member="Assigns">
     <Type Name="Assign">
       <Column Name="CourseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

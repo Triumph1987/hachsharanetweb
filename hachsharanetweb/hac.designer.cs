@@ -66,7 +66,7 @@ namespace hachsharanetweb
     #endregion
 		
 		public hacDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["HachsharaNETConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["HachsharaNETConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
