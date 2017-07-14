@@ -14,6 +14,7 @@ namespace hachsharanetweb
         protected void Page_Load(object sender, EventArgs e)
         {
             dc = Connection.getdatacontext();
+            if (!IsPostBack) { }
             var Questions = (from s in dc.MatchingQuestions
                             orderby s.qID descending
                             select s).FirstOrDefault();
@@ -27,6 +28,19 @@ namespace hachsharanetweb
             {
                 QuestionID.Text = (Questions.qID + 1).ToString();
             }
+
+            if (!IsPostBack)
+            {
+                QuestionTypeT.Items.Add("בחר סוג");
+                var QuestionType = from s in dc.QuestionsTypes
+                                   select s;
+                foreach (var q in QuestionType)
+                {
+                    QuestionTypeT.Items.Add(q.QuestionType);
+                }
+
+            }
+
         }
 
         protected void Create_Click(object sender, EventArgs e)
@@ -42,8 +56,8 @@ namespace hachsharanetweb
                     //comm.CommandText = cmdString;
                     comm.Parameters.Add("@val1", SqlDbType.Int).Value = int.Parse(QuestionID.Text);
                     comm.Parameters.Add("@val2", SqlDbType.NVarChar).Value = QuestionText.Text;
-                    comm.Parameters.Add("@val3", SqlDbType.NVarChar).Value = QuestionTypeText.Text;
-                    comm.Parameters.Add("@val4", SqlDbType.Bit).Value = ReleventQuestion.Text;
+                    comm.Parameters.Add("@val3", SqlDbType.NVarChar).Value = QuestionTypeT.Text;
+                    comm.Parameters.Add("@val4", SqlDbType.Bit).Value = RadioButtonList1.Text;
                
                     try
                     {

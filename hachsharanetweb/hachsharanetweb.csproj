@@ -87,6 +87,7 @@
     <Content Include="main\Homepagecss.css" />
     <Content Include="main\SearchCss.css" />
     <Content Include="MatchingQuestions.aspx" />
+    <Content Include="MatchingQuestionsDB.aspx" />
     <Content Include="packages.config" />
     <Content Include="General.Master" />
     <Content Include="bootstrap\css\bootstrap-theme.css.map" />
@@ -180,6 +181,13 @@
     </Compile>
     <Compile Include="MatchingQuestions.aspx.designer.cs">
       <DependentUpon>MatchingQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MatchingQuestionsDB.aspx.cs">
+      <DependentUpon>MatchingQuestionsDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatchingQuestionsDB.aspx.designer.cs">
+      <DependentUpon>MatchingQuestionsDB.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchCourses.aspx.cs">

@@ -2988,6 +2988,8 @@ select[multiple].input-lg {
     padding-top: 7px;
     margin-bottom: 0;
     text-align: right;
+   position: relative;
+    right: -43em;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -3822,6 +3824,7 @@ tbody.collapse.in {
   position: relative;
   display: table;
   border-collapse: separate;
+      right: -10em;
 }
 .input-group[class*="col-"] {
   float: none;

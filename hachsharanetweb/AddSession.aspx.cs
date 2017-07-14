@@ -96,6 +96,7 @@ namespace hachsharanetweb
 
         protected void Clean_Click(object sender, EventArgs e)
         {
+            Clean.Attributes.Add("onClick", "document.forms[0].reset();return false;");
             CourseIDText.Text = string.Empty;
             CourseIDText.ReadOnly = false;
 

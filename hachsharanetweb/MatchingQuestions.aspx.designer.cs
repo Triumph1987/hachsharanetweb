@@ -49,13 +49,13 @@ namespace hachsharanetweb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div3;
         
         /// <summary>
-        /// QuestionTypeText control.
+        /// QuestionTypeT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox QuestionTypeText;
+        protected global::System.Web.UI.WebControls.DropDownList QuestionTypeT;
         
         /// <summary>
         /// Div4 control.
@@ -67,13 +67,13 @@ namespace hachsharanetweb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div4;
         
         /// <summary>
-        /// ReleventQuestion control.
+        /// RadioButtonList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ReleventQuestion;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
         
         /// <summary>
         /// CreateButton control.
@@ -92,5 +92,14 @@ namespace hachsharanetweb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SearchAgain;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

@@ -22,7 +22,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="QuestionID" runat="server"  name="QuestionID" type="text" placeholder="מזהה שאלה" class="form-control input-md required"  Visible="True"></asp:TextBox>
+    <asp:TextBox id="QuestionID" runat="server"  name="QuestionID" type="text" placeholder="מזהה שאלה" class="form-control input-md required"  Visible="True" ReadOnly="True"></asp:TextBox>
       </div>
 
     
@@ -83,15 +83,16 @@
 
 
     <div runat="server" id="Div3" class="form-group">
-  <label class="col-md-4 control-label" for="QuestionTypeText">סוג שאלה</label>  
+  <label class="col-md-4 control-label" for="QuestionT">סוג שאלה</label>  
   <div class="col-md-4">
  <div class="input-group">
        <div class="input-group-addon">
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="QuestionTypeText" runat="server"  name="QuestionTypeText" type="text" placeholder="סוג שאלה" class="form-control input-md" ></asp:TextBox>
+      <asp:DropDownList ID="QuestionTypeT" runat="server" name="QuestionTypeT" type="text" placeholder="סוג שאלה" class="form-control input-md" ></asp:DropDownList>
       </div>
+  
 
     
   </div>
@@ -101,14 +102,14 @@
 
     
     <div runat="server" id="Div4" class="form-group">
-  <label class="col-md-4 control-label" for="ReleventQuestion">האם השאלה רלוונטית?</label>  
+  <label class="col-md-4 control-label" for="ReleventQuestion">האם השאלה פעילה?</label>  
   <div class="col-md-4">
  <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
-    <asp:TextBox id="ReleventQuestion" runat="server"  name="ReleventQuestion" type="text" placeholder="האם השאלה רלוונטית?" class="form-control input-md" ></asp:TextBox>
+     <asp:RadioButtonList  style="
+    position: relative;" RepeatDirection="Horizontal" ID="RadioButtonList1" runat="server">
+             <asp:ListItem Text="כן" Value="TRUE" />
+    <asp:ListItem Text="לא" Value="FALSE" />
+     </asp:RadioButtonList>
       </div>
 
     
@@ -124,9 +125,9 @@
         <div  class="form-group">
   <label class="col-md-4 control-label" ></label>  
   <div class="col-md-4">
-      <asp:Button href="#" class="btn btn-success" ID="CreateButton" runat="server" Text="צור מחזור" OnClick="Create_Click" />
-      <asp:Button href="#" class="btn btn-danger" ID="SearchAgain" runat="server" Text="חיפוש קורס חדש" OnClick="Clean_Click" />
-  
+      <asp:Button href="#" class="btn btn-success" ID="CreateButton" runat="server" Text="שמור שאלה" OnClick="Create_Click" />
+      <asp:Button href="#" class="btn btn-danger" ID="SearchAgain" runat="server" Text="צור שאלה חדשה" OnClick="Clean_Click" />
+    <asp:Button href="#" class="btn btn-danger" ID="Button1" runat="server" Text="צפה ברשימת השאלות" />
   </div>
 </div>
 </fieldset>
