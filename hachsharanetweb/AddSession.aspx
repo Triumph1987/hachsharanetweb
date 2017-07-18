@@ -4,10 +4,32 @@
     <title>הכשרה.נט - יצירת מחזור קורס</title>
         <script>
 $(function() {
-    $( "#<%= StartDateText.ClientID %>" ).datepicker();
+    $("#<%= StartDateText.ClientID %>").datepicker();
+     $( "#<%= EndDateText.ClientID %>" ).datepicker();
 });
 </script>
+    
+            <script>
+                function Confirm() {
 
+                    //$('.CreateButton').on('click', function () {
+                   
+                        $.alert({
+                            title: 'הצלחה!',
+                            content: 'המחזור נשמר במערכת',
+                            type: 'green',
+                            rtl: true,
+                            buttons: {
+                                confirm: {
+                                    text: 'סגור',
+                                }
+                            },
+                        });
+                    //});
+                }
+
+
+    </script>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 
@@ -180,7 +202,7 @@ $(function() {
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="EndDateText" runat="server"  name="EndDateText" type="date" placeholder="תאריך סיום" class="form-control input-md" Visible="True" ></asp:TextBox>
+    <asp:TextBox id="EndDateText" runat="server"  name="EndDateText"  placeholder="תאריך סיום" class="form-control input-md" Visible="True" ></asp:TextBox>
       </div>
       </div>
             </div>

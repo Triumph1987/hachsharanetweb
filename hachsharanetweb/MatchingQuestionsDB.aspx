@@ -6,7 +6,8 @@
 {
 	border: solid 2px black;
 	min-width: 80%;
-        direction:rtl;
+        text-align:right;
+        float:right;
 }
 .header
 {
@@ -14,8 +15,8 @@
 	font-family: Arial;
 	color: White;
 	height: 25px;
-	text-align: right;
 	font-size: 16px;
+    text-align:right;
 }
 
 .rows
@@ -25,7 +26,7 @@
 	font-size: 14px;
 	color: #000;
 	min-height: 25px;
-	text-align: left;
+	text-align: right;
 }
 .rows:hover
 {
@@ -65,10 +66,12 @@
 .mydatagrid td
 {
 	padding: 5px;
+    direction:rtl;
 }
 .mydatagrid th
 {
 	padding: 5px;
+    text-align:right;
 }
 .centerediv {
   position: absolute;
@@ -82,12 +85,20 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <form id="form1" runat="server">
         <h1 class="page-head">טבלת שאלות התאמה</h1>
+          <div style="margin-left: 240px">
+              <asp:Button href="#" class="btn btn-success" ID="Goback" runat="server" Text="ליצירת שאלה" style="
+    float: right;
+    position: relative;
+    top: -3em;
+    right: 55em;
+" OnClick="Goback_Click" />
+        </div>
     <asp:GridView ID="GridView1" CssClass="mydatagrid" PagerStyle-CssClass="pager" RowStyle-CssClass="rows" HeaderStyle-CssClass="header" runat="server" AutoGenerateColumns="False" DataKeyNames="qID" DataSourceID="SqlCon1">
         <Columns>
-            <asp:BoundField DataField="qID" HeaderText="qID" ReadOnly="True" SortExpression="qID" />
-            <asp:BoundField DataField="Question" HeaderText="Question" SortExpression="Question" />
-            <asp:BoundField DataField="QuestionType" HeaderText="QuestionType" SortExpression="QuestionType" />
-            <asp:CheckBoxField DataField="QuestionRelevance" HeaderText="QuestionRelevance" SortExpression="QuestionRelevance" />
+            <asp:CheckBoxField DataField="QuestionRelevance" HeaderText="רלוונטיות שאלה" SortExpression="QuestionRelevance" />
+            <asp:BoundField DataField="QuestionType" HeaderText="סוג שאלה" SortExpression="QuestionType" />
+            <asp:BoundField DataField="Question" HeaderText="שאלה" SortExpression="Question" />
+            <asp:BoundField DataField="qID" HeaderText="מזהה שאלה" ReadOnly="True" SortExpression="qID" />
         </Columns>
         <HeaderStyle CssClass="header"></HeaderStyle>
 
@@ -96,5 +107,8 @@
 <RowStyle CssClass="rows"></RowStyle>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlCon1" runat="server" ConnectionString="<%$ ConnectionStrings:HachsharaNETConnectionString1 %>" SelectCommand="SELECT * FROM [MatchingQuestions]"></asp:SqlDataSource>
+        
     </form>
+
+      
 </asp:Content>

@@ -13,5 +13,10 @@ namespace hachsharanetweb
         {
 
         }
+
+        protected void Goback_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MatchingQuestions.aspx");
+        }
     }
 }

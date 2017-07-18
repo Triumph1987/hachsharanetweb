@@ -63,19 +63,27 @@ namespace hachsharanetweb
                     {
                         conn.Open();
                         comm.ExecuteNonQuery();
+                        ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Confirm();", true);
                     }
                     catch (Exception)
 
                     {
                         ScriptManager.RegisterStartupScript(this, GetType(), "שגיאת פרטים", "אנא הזן מספר קורס\");", true);
                     }
+                     
                 }
             }
         }
 
         protected void Clean_Click(object sender, EventArgs e)
         {
+            QuestionText.Text = string.Empty;
+            QuestionTypeT.Text = "בחר סוג";
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MatchingQuestionsDB.aspx");
         }
     }
 }

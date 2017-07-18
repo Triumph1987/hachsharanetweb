@@ -2,6 +2,28 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <title> הכשרה.נט - יצירת שאלות התאמה</title>
+   
+            <script>
+                function Confirm() {
+
+                    //$('.CreateButton').on('click', function () {
+                   
+                        $.alert({
+                            title: 'הצלחה!',
+                            content: 'השאלה נשמרה במערכת',
+                            type: 'green',
+                            rtl: true,
+                            buttons: {
+                                confirm: {
+                                    text: 'סגור',
+                                }
+                            },
+                        });
+                    //});
+                }
+
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     
@@ -124,10 +146,10 @@
 
         <div  class="form-group">
   <label class="col-md-4 control-label" ></label>  
-  <div class="col-md-4">
+  <div class="col-md-6">
       <asp:Button href="#" class="btn btn-success" ID="CreateButton" runat="server" Text="שמור שאלה" OnClick="Create_Click" />
       <asp:Button href="#" class="btn btn-danger" ID="SearchAgain" runat="server" Text="צור שאלה חדשה" OnClick="Clean_Click" />
-    <asp:Button href="#" class="btn btn-danger" ID="Button1" runat="server" Text="צפה ברשימת השאלות" />
+    <asp:Button href="#" class="btn btn-success" ID="Button1" runat="server" Text="צפה ברשימת השאלות" OnClick="Button1_Click" />
   </div>
 </div>
 </fieldset>
@@ -142,7 +164,6 @@
 </div>
    </div>
 
-           
 
 
 
