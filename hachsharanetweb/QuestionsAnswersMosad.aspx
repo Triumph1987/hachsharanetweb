@@ -20,7 +20,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="TextBox2" runat="server"  name="InsIDText" type="text" placeholder="שם מוסד הכשרה" class="form-control input-md" OnTextChanged="TextBox2_TextChanged" ></asp:TextBox>
+    <asp:TextBox id="InsIDText" runat="server"  name="InsIDText" type="text" placeholder="שם מוסד הכשרה" class="form-control input-md" OnTextChanged="TextBox2_TextChanged" ReadOnly="True"></asp:TextBox>
       </div>
 
     
@@ -36,8 +36,8 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="TextBox1" runat="server"  name="CourseNameText" type="text" placeholder="שם קורס" class="form-control input-md required" Visible="True" Enabled="True" ></asp:TextBox>
-     <asp:DropDownList ID="CourseNameDD" runat="server" OnSelectedIndexChanged="CourseNameDD_SelectedIndexChanged"></asp:DropDownList>
+<%--    <asp:TextBox id="TextBox1" runat="server"  name="CourseNameText" type="text" placeholder="שם קורס"  ></asp:TextBox>--%>
+     <asp:DropDownList ID="CourseNameDD" runat="server" class="form-control input-md required" Visible="True" Enabled="True" OnSelectedIndexChanged="CourseNameDD_SelectedIndexChanged"></asp:DropDownList>
       </div>
 
     
@@ -74,7 +74,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="QuestionText" runat="server"  name="QuestionText" type="text" placeholder="שאלה" class="form-control input-md"></asp:TextBox>
+    <asp:TextBox id="QuestionText" runat="server"  name="QuestionText" type="text" placeholder="שאלה" class="form-control input-md" ReadOnly="True"></asp:TextBox>
       </div>
 
     
@@ -99,10 +99,16 @@
   
 </div>
 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+       <div  class="form-group">
+  <label class="col-md-5 control-label" ></label>  
+  <div class="col-md-5">
+      <asp:Button ID="SaveAndMove" runat="server" Text="שמור ועבור לשאלה הבאה" class="btn btn-success" OnClick="SaveAndMove_Click" />
+      <asp:Button ID="Previous" runat="server" Text="עבור לשאלה הקודמת" class="btn btn-default" OnClick="Previous_Click" />
+     </div>
+</div>
     </fieldset>
 </form>
     </div>
-
 
 
 </div>

@@ -786,7 +786,7 @@ namespace hachsharanetweb
 		
 		private System.Nullable<bool> _Answer;
 		
-		private EntityRef<JobSeeker> _JobSeeker;
+		private EntityRef<Course> _Course;
 		
 		private EntityRef<MatchingQuestion> _MatchingQuestion;
 		
@@ -804,7 +804,7 @@ namespace hachsharanetweb
 		
 		public CourseAnswer()
 		{
-			this._JobSeeker = default(EntityRef<JobSeeker>);
+			this._Course = default(EntityRef<Course>);
 			this._MatchingQuestion = default(EntityRef<MatchingQuestion>);
 			OnCreated();
 		}
@@ -820,7 +820,7 @@ namespace hachsharanetweb
 			{
 				if ((this._CourseID != value))
 				{
-					if (this._JobSeeker.HasLoadedOrAssignedValue)
+					if (this._Course.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -877,36 +877,36 @@ namespace hachsharanetweb
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="JobSeeker_CourseAnswer", Storage="_JobSeeker", ThisKey="CourseID", OtherKey="ID", IsForeignKey=true)]
-		public JobSeeker JobSeeker
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_CourseAnswer", Storage="_Course", ThisKey="CourseID", OtherKey="CourseID", IsForeignKey=true)]
+		public Course Course
 		{
 			get
 			{
-				return this._JobSeeker.Entity;
+				return this._Course.Entity;
 			}
 			set
 			{
-				JobSeeker previousValue = this._JobSeeker.Entity;
+				Course previousValue = this._Course.Entity;
 				if (((previousValue != value) 
-							|| (this._JobSeeker.HasLoadedOrAssignedValue == false)))
+							|| (this._Course.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._JobSeeker.Entity = null;
+						this._Course.Entity = null;
 						previousValue.CourseAnswers.Remove(this);
 					}
-					this._JobSeeker.Entity = value;
+					this._Course.Entity = value;
 					if ((value != null))
 					{
 						value.CourseAnswers.Add(this);
-						this._CourseID = value.ID;
+						this._CourseID = value.CourseID;
 					}
 					else
 					{
 						this._CourseID = default(int);
 					}
-					this.SendPropertyChanged("JobSeeker");
+					this.SendPropertyChanged("Course");
 				}
 			}
 		}
@@ -986,6 +986,8 @@ namespace hachsharanetweb
 		
 		private System.Nullable<int> _InstituteID;
 		
+		private EntitySet<CourseAnswer> _CourseAnswers;
+		
 		private EntitySet<CourseSession> _CourseSessions;
 		
 		private EntityRef<Institute> _Institute;
@@ -1012,6 +1014,7 @@ namespace hachsharanetweb
 		
 		public Course()
 		{
+			this._CourseAnswers = new EntitySet<CourseAnswer>(new Action<CourseAnswer>(this.attach_CourseAnswers), new Action<CourseAnswer>(this.detach_CourseAnswers));
 			this._CourseSessions = new EntitySet<CourseSession>(new Action<CourseSession>(this.attach_CourseSessions), new Action<CourseSession>(this.detach_CourseSessions));
 			this._Institute = default(EntityRef<Institute>);
 			OnCreated();
@@ -1161,6 +1164,19 @@ namespace hachsharanetweb
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_CourseAnswer", Storage="_CourseAnswers", ThisKey="CourseID", OtherKey="CourseID")]
+		public EntitySet<CourseAnswer> CourseAnswers
+		{
+			get
+			{
+				return this._CourseAnswers;
+			}
+			set
+			{
+				this._CourseAnswers.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Course_CourseSession", Storage="_CourseSessions", ThisKey="CourseID", OtherKey="CourseID")]
 		public EntitySet<CourseSession> CourseSessions
 		{
@@ -1226,6 +1242,18 @@ namespace hachsharanetweb
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_CourseAnswers(CourseAnswer entity)
+		{
+			this.SendPropertyChanging();
+			entity.Course = this;
+		}
+		
+		private void detach_CourseAnswers(CourseAnswer entity)
+		{
+			this.SendPropertyChanging();
+			entity.Course = null;
 		}
 		
 		private void attach_CourseSessions(CourseSession entity)
@@ -1801,8 +1829,6 @@ namespace hachsharanetweb
 		
 		private EntitySet<Assign> _Assigns;
 		
-		private EntitySet<CourseAnswer> _CourseAnswers;
-		
 		private EntitySet<JobSeekersAnswer> _JobSeekersAnswers;
 		
 		private EntityRef<User> _User;
@@ -1838,7 +1864,6 @@ namespace hachsharanetweb
 		public JobSeeker()
 		{
 			this._Assigns = new EntitySet<Assign>(new Action<Assign>(this.attach_Assigns), new Action<Assign>(this.detach_Assigns));
-			this._CourseAnswers = new EntitySet<CourseAnswer>(new Action<CourseAnswer>(this.attach_CourseAnswers), new Action<CourseAnswer>(this.detach_CourseAnswers));
 			this._JobSeekersAnswers = new EntitySet<JobSeekersAnswer>(new Action<JobSeekersAnswer>(this.attach_JobSeekersAnswers), new Action<JobSeekersAnswer>(this.detach_JobSeekersAnswers));
 			this._User = default(EntityRef<User>);
 			OnCreated();
@@ -2081,19 +2106,6 @@ namespace hachsharanetweb
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="JobSeeker_CourseAnswer", Storage="_CourseAnswers", ThisKey="ID", OtherKey="CourseID")]
-		public EntitySet<CourseAnswer> CourseAnswers
-		{
-			get
-			{
-				return this._CourseAnswers;
-			}
-			set
-			{
-				this._CourseAnswers.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="JobSeeker_JobSeekersAnswer", Storage="_JobSeekersAnswers", ThisKey="ID", OtherKey="SeekerID")]
 		public EntitySet<JobSeekersAnswer> JobSeekersAnswers
 		{
@@ -2168,18 +2180,6 @@ namespace hachsharanetweb
 		}
 		
 		private void detach_Assigns(Assign entity)
-		{
-			this.SendPropertyChanging();
-			entity.JobSeeker = null;
-		}
-		
-		private void attach_CourseAnswers(CourseAnswer entity)
-		{
-			this.SendPropertyChanging();
-			entity.JobSeeker = this;
-		}
-		
-		private void detach_CourseAnswers(CourseAnswer entity)
 		{
 			this.SendPropertyChanging();
 			entity.JobSeeker = null;
