@@ -10,52 +10,43 @@
 namespace hachsharanetweb {
     
     
-    public partial class QuestionsAnswersMosad {
+    public partial class WebForm1 {
         
         /// <summary>
-        /// TextBox1 control.
+        /// JobSIDText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox JobSIDText;
         
         /// <summary>
-        /// Div4 control.
+        /// JobSFullnameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div4;
+        protected global::System.Web.UI.WebControls.TextBox JobSFullnameText;
         
         /// <summary>
-        /// InsIDText control.
+        /// Approve control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox InsIDText;
+        protected global::System.Web.UI.WebControls.Button Approve;
         
         /// <summary>
-        /// Div3 control.
+        /// Clean control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div3;
-        
-        /// <summary>
-        /// CourseNameDD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CourseNameDD;
+        protected global::System.Web.UI.WebControls.Button Clean;
         
         /// <summary>
         /// QuestionID control.
@@ -101,15 +92,6 @@ namespace hachsharanetweb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList QuestionAnswer;
-        
-        /// <summary>
-        /// TextBox3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
         
         /// <summary>
         /// SaveAndMove control.

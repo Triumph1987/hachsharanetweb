@@ -63,20 +63,21 @@ namespace hachsharanetweb
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "שגיאת פרטים", "alert(\"לא קיים מזהה קורס עם מספר זה\");", true);
+                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Error1();", true);
                 }
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "שגיאת פרטים", "אנא הזן מספר קורס\");", true);
+                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Error1();", true);
             }
             
         }
 
         protected void Clean_Click(object sender, EventArgs e)
         {
-                CourseIDText.Text = string.Empty;
-            CourseIDText.ReadOnly = false;
+            //    CourseIDText.Text = string.Empty;
+            //CourseIDText.ReadOnly = false;
+            Response.Redirect("SearchCourses.aspx");
 
 
         }

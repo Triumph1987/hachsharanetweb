@@ -22,7 +22,46 @@ GetClock();
 setInterval(GetClock,1000);
 }
 </script>
+     <script>
+         function Confirm() {
 
+             //$('.CreateButton').on('click', function () {
+
+             $.alert({
+                 title: 'הצלחה!',
+                 content: 'המחזור נשמר במערכת',
+                 type: 'green',
+                 rtl: true,
+                 buttons: {
+                     confirm: {
+                         text: 'סגור',
+                     }
+                 },
+             });
+             //});
+         }
+         </script>
+         <script>
+
+         function Error1() {
+
+             //$('.CreateButton').on('click', function () {
+
+             $.alert({
+                 title: 'לא נמצא קורס במספר זה',
+                 content: 'אנא חפש שוב',
+                 type: 'red',
+                 rtl: true,
+                 buttons: {
+                     confirm: {
+                         text: 'הזן שוב',
+                     }
+                 },
+             });
+             //});
+         }
+
+    </script>
 
        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
     <script src="jquery/jquery-3.2.1.min.js"></script>

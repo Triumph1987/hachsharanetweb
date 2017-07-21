@@ -31,7 +31,7 @@
       <Column Name="CourseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Answer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="JobSeeker_CourseAnswer" Member="JobSeeker" ThisKey="CourseID" OtherKey="ID" Type="JobSeeker" IsForeignKey="true" />
+      <Association Name="Course_CourseAnswer" Member="Course" ThisKey="CourseID" OtherKey="CourseID" Type="Course" IsForeignKey="true" />
       <Association Name="MatchingQuestion_CourseAnswer" Member="MatchingQuestion" ThisKey="QuestionID" OtherKey="qID" Type="MatchingQuestion" IsForeignKey="true" />
     </Type>
   </Table>
@@ -44,6 +44,7 @@
       <Column Name="ManagerFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ManagerLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="InstituteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Course_CourseAnswer" Member="CourseAnswers" ThisKey="CourseID" OtherKey="CourseID" Type="CourseAnswer" />
       <Association Name="Course_CourseSession" Member="CourseSessions" ThisKey="CourseID" OtherKey="CourseID" Type="CourseSession" />
       <Association Name="Institute_Course" Member="Institute" ThisKey="InstituteID" OtherKey="InstituteID" Type="Institute" IsForeignKey="true" />
     </Type>
@@ -87,7 +88,6 @@
       <Column Name="RefusedCourse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="ResponsibleUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="JobSeeker_Assign" Member="Assigns" ThisKey="ID" OtherKey="SeekerID" Type="Assign" />
-      <Association Name="JobSeeker_CourseAnswer" Member="CourseAnswers" ThisKey="ID" OtherKey="CourseID" Type="CourseAnswer" />
       <Association Name="JobSeeker_JobSeekersAnswer" Member="JobSeekersAnswers" ThisKey="ID" OtherKey="SeekerID" Type="JobSeekersAnswer" />
       <Association Name="User_JobSeeker" Member="User" ThisKey="ResponsibleUserID" OtherKey="ID" Type="User" IsForeignKey="true" />
     </Type>

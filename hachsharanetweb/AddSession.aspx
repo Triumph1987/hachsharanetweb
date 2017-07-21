@@ -9,27 +9,8 @@ $(function() {
 });
 </script>
     
-            <script>
-                function Confirm() {
+           
 
-                    //$('.CreateButton').on('click', function () {
-                   
-                        $.alert({
-                            title: 'הצלחה!',
-                            content: 'המחזור נשמר במערכת',
-                            type: 'green',
-                            rtl: true,
-                            buttons: {
-                                confirm: {
-                                    text: 'סגור',
-                                }
-                            },
-                        });
-                    //});
-                }
-
-
-    </script>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 

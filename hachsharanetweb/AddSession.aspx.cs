@@ -85,7 +85,7 @@ namespace hachsharanetweb
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "שגיאת פרטים", "alert(\"לא קיים מזהה קורס עם מספר זה\");", true);
+                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Error();", true);
                 }
             }
             catch
