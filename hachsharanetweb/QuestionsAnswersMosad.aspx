@@ -12,7 +12,6 @@
 <form class="form-horizontal" dir="rtl" runat="server">
 
 <fieldset>
-    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                       <div runat="server" id="Div4" class="form-group">
   <label class="col-md-4 control-label" for="InsIDText">שם מוסד הכשרה</label>  
   <div class="col-md-4">
@@ -37,9 +36,9 @@
         <i class="fa fa-user">
         </i>
        </div>
-     <asp:DropDownList ID="CourseNameDD" class="form-control input-md required" runat="server"></asp:DropDownList>
 <%--    <asp:TextBox id="TextBox1" runat="server"  name="CourseNameText" type="text" placeholder="שם קורס"  ></asp:TextBox>--%>
-        </div>
+     <asp:DropDownList ID="CourseNameDD" runat="server" class="form-control input-md required" Visible="True" Enabled="True" OnSelectedIndexChanged="CourseNameDD_SelectedIndexChanged"></asp:DropDownList>
+      </div>
 
     
   </div>
@@ -99,11 +98,11 @@
 
   
 </div>
-<asp:TextBox ID="TextBox3" type="number" runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
        <div  class="form-group">
   <label class="col-md-5 control-label" ></label>  
   <div class="col-md-5">
-      <asp:Button ID="SaveAndMove" runat="server" Text="שמור ועבור לשאלה הבאה" class="btn btn-success" OnClick="SaveAndMove_Click"/>
+      <asp:Button ID="SaveAndMove" runat="server" Text="שמור ועבור לשאלה הבאה" class="btn btn-success" OnClick="SaveAndMove_Click" />
       <asp:Button ID="Previous" runat="server" Text="עבור לשאלה הקודמת" class="btn btn-default" OnClick="Previous_Click" />
      </div>
 </div>
