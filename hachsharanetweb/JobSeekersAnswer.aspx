@@ -20,7 +20,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="JobSIDText" runat="server"  name="JobSIDText" type="text" placeholder="מזהה קורס" class="form-control input-md required"  Visible="True"></asp:TextBox>
+    <asp:TextBox id="JobSIDText" runat="server"  name="JobSIDText" type="text" placeholder="מספר תעודת זהות" class="form-control input-md required"  Visible="True"></asp:TextBox>
       </div>
 
         </div>
@@ -36,7 +36,7 @@
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="JobSFullnameText" runat="server"  name="JobSFullnameText" type="text" placeholder="מזהה קורס" class="form-control input-md required"  Visible="True"></asp:TextBox>
+    <asp:TextBox id="JobSFullnameText" runat="server"  name="JobSFullnameText" type="text" placeholder="שם מלא" class="form-control input-md required"  Visible="True"></asp:TextBox>
       </div>
 
         </div>
@@ -112,7 +112,8 @@
 
      </div>
 </div>
-
+    <br/>
+       <asp:Button ID="CheckMatch" runat="server" Text="הרץ מנגנון התאמה" class="btn btn-success" OnClick="SaveAndMove_Click" />
   
       </fieldset>
     </form>
