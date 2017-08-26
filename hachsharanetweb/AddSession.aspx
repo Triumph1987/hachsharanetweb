@@ -1,20 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/General.Master" AutoEventWireup="true" CodeBehind="AddSession.aspx.cs" Inherits="hachsharanetweb.AddSession" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  
+
     <title>הכשרה.נט - יצירת מחזור קורס</title>
-        <script>
-$(function() {
-    $("#<%= StartDateText.ClientID %>").datepicker();
-     $( "#<%= EndDateText.ClientID %>" ).datepicker();
-});
-</script>
-    
-           
-
-    </asp:Content>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-
-      <h1 class="page-head">יצירת מחזור קורס</h1>
+    <h1 class="page-head">יצירת מחזור קורס</h1>
     <div class="container">
 <div class="row">
 <div class="col-md-9 ">
@@ -40,17 +30,6 @@ $(function() {
   
 </div>
 
-
-    <div  class="form-group">
-  <label class="col-md-4 control-label" ></label>  
-  <div class="col-md-4">
-      <asp:Button href="#" class="btn btn-success" ID="Approve" runat="server" Text="אשר" OnClick="Approve_Click" />
-      <asp:Button href="#" class="btn btn-danger" ID="Clean" runat="server" Text="נקה" OnClick="Clean_Click" />
-  
-  </div>
-</div>
-
-    
     <div runat="server" id="Div1" class="form-group">
   <label class="col-md-4 control-label" for="CourseNameText">שם קורס</label>  
   <div class="col-md-4">
@@ -66,6 +45,15 @@ $(function() {
   </div>
 
   
+</div>
+
+    <div  class="form-group">
+  <label class="col-md-4 control-label" ></label>  
+  <div class="col-md-4">
+      <asp:Button href="#" class="btn btn-success" ID="Approve" runat="server" Text="אשר" OnClick="Approve_Click" />
+      <asp:Button href="#" class="btn btn-danger" ID="Clean" runat="server" Text="נקה" OnClick="Clean_Click" />
+  
+  </div>
 </div>
                 <div runat="server" id="Div5" class="form-group">
   <label class="col-md-4 control-label" for="InsIDText">שם מוסד הכשרה</label>  
@@ -168,7 +156,7 @@ $(function() {
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="StartDateText" runat="server"  name="StartDateText"  type="text" placeholder="תאריך התחלה" class="form-control input-md" Visible="True"></asp:TextBox>
+    <asp:TextBox id="StartDateText" runat="server"  name="StartDateText" type="date" placeholder=",תאריך התחלה" class="form-control input-md" Visible="True"></asp:TextBox>
       </div>
 
     
@@ -185,7 +173,7 @@ $(function() {
         <i class="fa fa-user">
         </i>
        </div>
-    <asp:TextBox id="EndDateText" runat="server"  name="EndDateText"  placeholder="תאריך סיום" class="form-control input-md" Visible="True" ></asp:TextBox>
+    <asp:TextBox id="EndDateText" runat="server"  name="EndDateText" type="date" placeholder="תאריך סיום" class="form-control input-md" Visible="True" ></asp:TextBox>
       </div>
       </div>
             </div>
@@ -236,7 +224,4 @@ $(function() {
 
 </div>
    </div>
-
-           
-
 </asp:Content>

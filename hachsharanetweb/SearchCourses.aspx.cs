@@ -70,14 +70,14 @@ namespace hachsharanetweb
                 // from the Rows collection.
                 GridViewRow row = GridView2.Rows[index];
 
-                //row.Cells[1].BackColor = System.Drawing.Color.Red;
-                //TextBox2.Text = GridView2.Rows[index].Cells[1].Text.ToString();
-
-                Session["CourseNum"] = GridView2.Rows[index].Cells[1].Text.ToString();
+                Session["CourseNum"] = row.Cells[0];
                 Response.Redirect("AddCourse.aspx");
             }
 
-        }      
+        }
+
+        
+
 
     }
 }

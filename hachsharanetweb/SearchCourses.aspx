@@ -5,8 +5,9 @@
 
     <script src="jquery/jquery-3.2.1.min.js"></script>
         <style>
-            .mydatagrid
+        .mydatagrid
 {
+	width: 80%;
 	border: solid 2px black;
 	min-width: 80%;
         direction:rtl;
@@ -130,11 +131,9 @@
 
         <br />
        <div class="col-md-11" style="left: 17%";>
-        <asp:GridView ID="GridView2" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager" RowStyle-CssClass="rows" HeaderStyle-CssClass="header" EmptyDataText="לא נמצאו תוצאות" EmptyDataRowStyle-HorizontalAlign="Center" EmptyDataRowStyle-Wrap="False" OnRowCommand="GridView2_RowCommand" Width="476px">
+        <asp:GridView ID="GridView2" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager" RowStyle-CssClass="rows" HeaderStyle-CssClass="header" EmptyDataText="לא נמצאו תוצאות" EmptyDataRowStyle-HorizontalAlign="Center" EmptyDataRowStyle-Wrap="False">
            
             <Columns>
-
-
                <asp:TemplateField>
   <ItemTemplate>
     <asp:Button ID="AddButton" runat="server" 
@@ -143,7 +142,6 @@ CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"
       Text="לפרטים המלאים" />
   </ItemTemplate> 
 </asp:TemplateField>
-               
             </Columns>
 <EmptyDataRowStyle HorizontalAlign="Center" Wrap="False"></EmptyDataRowStyle>
 
@@ -156,8 +154,6 @@ CommandArgument="<%# ((GridViewRow) Container).RowIndex %>"
         </asp:GridView>
 
            </div>
-
-
     </form>
 
 </asp:Content>
