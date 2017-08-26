@@ -22,24 +22,6 @@ namespace hachsharanetweb {
         protected global::System.Web.UI.WebControls.TextBox CourseIDText;
         
         /// <summary>
-        /// Approve control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Approve;
-        
-        /// <summary>
-        /// Clean control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Clean;
-        
-        /// <summary>
         /// Div1 control.
         /// </summary>
         /// <remarks>
@@ -56,6 +38,24 @@ namespace hachsharanetweb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CourseNameText;
+        
+        /// <summary>
+        /// Approve control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Approve;
+        
+        /// <summary>
+        /// Clean control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Clean;
         
         /// <summary>
         /// Div5 control.
