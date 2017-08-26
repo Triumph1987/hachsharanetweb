@@ -135,7 +135,7 @@
         </i>
        </div>
      <asp:DropDownList ID="SessionStatusText" runat="server" DataSourceID="SqlDataSource1" DataTextField="Status" DataValueField="Status" class="form-control input-md"></asp:DropDownList>
-       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HachsharaNETConnectionString %>" SelectCommand="SELECT [Status] FROM [Statuses]"></asp:SqlDataSource>
+       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HachsharaNETConnectionString2 %>" SelectCommand="SELECT [Status] FROM [Statuses]"></asp:SqlDataSource>
      <br />
     <%--<asp:TextBox id="SessionStatusText" runat="server"  name="SessionStatusText" type="text" placeholder="סטטוס קורס" class="form-control input-md"></asp:TextBox>--%>
       </div>
