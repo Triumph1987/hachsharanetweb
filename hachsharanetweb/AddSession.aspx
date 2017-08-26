@@ -40,6 +40,17 @@ $(function() {
   
 </div>
 
+
+    <div  class="form-group">
+  <label class="col-md-4 control-label" ></label>  
+  <div class="col-md-4">
+      <asp:Button href="#" class="btn btn-success" ID="Approve" runat="server" Text="אשר" OnClick="Approve_Click" />
+      <asp:Button href="#" class="btn btn-danger" ID="Clean" runat="server" Text="נקה" OnClick="Clean_Click" />
+  
+  </div>
+</div>
+
+    
     <div runat="server" id="Div1" class="form-group">
   <label class="col-md-4 control-label" for="CourseNameText">שם קורס</label>  
   <div class="col-md-4">
@@ -55,15 +66,6 @@ $(function() {
   </div>
 
   
-</div>
-
-    <div  class="form-group">
-  <label class="col-md-4 control-label" ></label>  
-  <div class="col-md-4">
-      <asp:Button href="#" class="btn btn-success" ID="Approve" runat="server" Text="אשר" OnClick="Approve_Click" />
-      <asp:Button href="#" class="btn btn-danger" ID="Clean" runat="server" Text="נקה" OnClick="Clean_Click" />
-  
-  </div>
 </div>
                 <div runat="server" id="Div5" class="form-group">
   <label class="col-md-4 control-label" for="InsIDText">שם מוסד הכשרה</label>  
