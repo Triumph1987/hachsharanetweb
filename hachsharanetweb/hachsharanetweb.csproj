@@ -87,6 +87,7 @@
     <Content Include="main\Homepagecss.css" />
     <Content Include="main\jquery-confirm.min.css" />
     <Content Include="main\jquery-confirm.min.js" />
+    <Content Include="main\Reports.css" />
     <Content Include="main\SearchCss.css" />
     <Content Include="MatchingQuestions.aspx" />
     <Content Include="MatchingQuestionsDB.aspx" />
@@ -107,6 +108,7 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="JobSeekersAnswer.aspx" />
     <Content Include="HatamaResults.aspx" />
+    <Content Include="CreateReports.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -222,6 +224,13 @@
     </Compile>
     <Compile Include="HatamaResults.aspx.designer.cs">
       <DependentUpon>HatamaResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateReports.aspx.cs">
+      <DependentUpon>CreateReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateReports.aspx.designer.cs">
+      <DependentUpon>CreateReports.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -63,6 +63,7 @@ namespace hachsharanetweb
                 }
                 else
                 {
+
                     ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Error1();", true);
                 }
             }

@@ -6,7 +6,7 @@
 <head runat="server">
     <link href="main/csslogin.css" rel="stylesheet" />
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <title></title>
+    <title>הכשרה.נט - כניסה למערכת</title>
     </head>
 <body>
 <div class="container">

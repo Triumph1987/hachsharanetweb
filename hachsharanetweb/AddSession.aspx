@@ -17,11 +17,9 @@
     <label class="col-md-4 control-label" for="CourseIDText">מזהה קורס</label>  
   <div class="col-md-4">
  <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
     <asp:TextBox id="CourseIDText" runat="server"  name="CourseIDText" type="text" placeholder="מזהה קורס" class="form-control input-md required"  Visible="True"></asp:TextBox>
+               <asp:CompareValidator runat="server" Operator="DataTypeCheck" Type="Integer" 
+ ControlToValidate="CourseIDText" ErrorMessage="יש להזין מספרים בלבד" />
       </div>
 
     

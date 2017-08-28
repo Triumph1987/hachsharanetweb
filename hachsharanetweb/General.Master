@@ -59,9 +59,28 @@ setInterval(GetClock,1000);
                  },
              });
              //});
-         }
+             }
+
+             function Error2() {
+
+                 //$('.CreateButton').on('click', function () {
+
+                 $.alert({
+                     title: 'לא הוזן מספר קורס',
+                     content: 'אנא הזן את המספר',
+                     type: 'red',
+                     rtl: true,
+                     buttons: {
+                         confirm: {
+                             text: 'הזן שוב',
+                         }
+                     },
+                 });
+                 //});
+             }
 
     </script>
+
 
        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
     <script src="jquery/jquery-3.2.1.min.js"></script>
@@ -138,18 +157,19 @@ setInterval(GetClock,1000);
                 </li>
                 <ul class="sub-menu collapse" id="CourseAssign">
                   <li><a href="#">קליטת דורש עבודה</a></li>
-                  <li><a href="#">שאלון התאמה</a></li>
-                  <li><a href="#">יצירת שאלות התאמה</a></li>
+                  <li><a href="/JobSeekersAnswer.aspx">שאלון התאמה</a></li>
+                  <li><a href="/MatchingQuestionDB.aspx">יצירת שאלות התאמה</a></li>
                     <li><a href="#">צפייה בתוצאות השמה</a></li>
                 </ul>
 
                 
                 <li data-toggle="collapse" data-target="#RepGen" class="collapsed">
-                  <a href="#"> מחולל דוחות <span class="arrow"></span></a>
+                  <a href="#">דוחות<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="RepGen">
-                  <li><a href="#">צור דוח</a></li>
-                  <li><a href="#">חיפוש דוח</a></li>
+                  <li><a href="/CreateReports.aspx">מאגר דוחות</a></li>
+
+
                      
                 </ul>
 
@@ -157,8 +177,8 @@ setInterval(GetClock,1000);
                   <a href="#"> ניהול מערכת <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="General">
-                  <li><a href="#">עדכון ויצירת משתמש</a></li>
-                  <li><a href="#">הרשאות</a></li>
+                  <li><a href="/Createuser.aspx">עדכון ויצירת משתמש</a></li>
+                  <li><a href="#">ניהול הרשאות</a></li>
                   <li><a href="#">הגדרות כלליות</a></li>
            
                 </ul>
@@ -166,11 +186,11 @@ setInterval(GetClock,1000);
                   <a href="#"> מוסד הכשרה <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="InstitueOwn">
-                  <li><a href="#">בקשה הוספת קורס</a></li>
-                  <li><a href="#">בקשה הוספת מחזור</a></li>
+                  <li><a href="#">בקשה להוספת קורס</a></li>
+                  <li><a href="#">בקשה להוספת מחזור</a></li>
                   <li><a href="#">בקשה למחיקת קורס/מחזור</a></li>
                     <li><a href="QuestionsAnswersMosad.aspx">מענה על שאלות התאמה</a></li>
-                    <li><a href="#">סטטוס בקשות</a></li>
+                    <li><a href="#">סטטוס בקשות הוספה</a></li>
            
                 </ul>
 

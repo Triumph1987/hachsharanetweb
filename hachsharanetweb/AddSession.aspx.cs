@@ -85,12 +85,12 @@ namespace hachsharanetweb
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Error();", true);
+                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Error1();", true);
                 }
             }
             catch
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "שגיאת פרטים", "אנא הזן מספר קורס\");", true);
+                ScriptManager.RegisterStartupScript(this.Page, GetType(), "script", "Error2();", true);
             }
 
         }
