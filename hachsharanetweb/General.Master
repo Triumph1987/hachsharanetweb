@@ -142,6 +142,17 @@ setInterval(GetClock,1000);
                 </ul>
 
 
+                <li data-toggle="collapse" data-target="#CourseAssign" class="collapsed">
+                  <a href="#"> שיבוץ והתאמה להכשרות <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="CourseAssign">
+                  <li><a href="/DoreshReceive.aspx">קליטת דורש עבודה</a></li>
+                  <li><a href="/JobSeekersAnswer.aspx">שאלון התאמה</a></li>
+                  <li><a href="/MatchingQuestions.aspx">יצירת שאלות התאמה</a></li>
+                    <li><a href="/Resultshatamarep.aspx">צפייה בתוצאות השמה</a></li>
+                </ul>
+
+                
                 <li data-toggle="collapse" data-target="#InstMan" class="collapsed">
                   <a href="#"> ניהול מוסדות הכשרה <span class="arrow"></span></a>
                 </li>  
@@ -151,19 +162,7 @@ setInterval(GetClock,1000);
                     
                             </ul>
 
-
-                <li data-toggle="collapse" data-target="#CourseAssign" class="collapsed">
-                  <a href="#"> שיבוץ והתאמה להכשרות <span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="CourseAssign">
-                  <li><a href="#">קליטת דורש עבודה</a></li>
-                  <li><a href="/JobSeekersAnswer.aspx">שאלון התאמה</a></li>
-                  <li><a href="/MatchingQuestionDB.aspx">יצירת שאלות התאמה</a></li>
-                    <li><a href="#">צפייה בתוצאות השמה</a></li>
-                </ul>
-
-                
-                <li data-toggle="collapse" data-target="#RepGen" class="collapsed">
+                   <li data-toggle="collapse" data-target="#RepGen" class="collapsed">
                   <a href="#">דוחות<span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="RepGen">
@@ -173,15 +172,7 @@ setInterval(GetClock,1000);
                      
                 </ul>
 
-                <li data-toggle="collapse" data-target="#General" class="collapsed">
-                  <a href="#"> ניהול מערכת <span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="General">
-                  <li><a href="/Createuser.aspx">עדכון ויצירת משתמש</a></li>
-                  <li><a href="#">ניהול הרשאות</a></li>
-                  <li><a href="#">הגדרות כלליות</a></li>
-           
-                </ul>
+              
                     <li data-toggle="collapse" data-target="#InstitueOwn" class="collapsed">
                   <a href="#"> מוסד הכשרה <span class="arrow"></span></a>
                 </li>
@@ -191,6 +182,15 @@ setInterval(GetClock,1000);
                   <li><a href="#">בקשה למחיקת קורס/מחזור</a></li>
                     <li><a href="QuestionsAnswersMosad.aspx">מענה על שאלות התאמה</a></li>
                     <li><a href="#">סטטוס בקשות הוספה</a></li>
+           
+                </ul>
+                  <li data-toggle="collapse" data-target="#General" class="collapsed">
+                  <a href="#"> ניהול מערכת <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="General">
+                  <li><a href="/Createuser.aspx">עדכון ויצירת משתמש</a></li>
+                  <li><a href="#">ניהול הרשאות</a></li>
+                  <li><a href="#">הגדרות כלליות</a></li>
            
                 </ul>
 

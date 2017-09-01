@@ -74,8 +74,10 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
     <Content Include="CreateUser.aspx" />
+    <Content Include="DoreshReceive.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Homepage.js" />
+    <Content Include="Image\danidan.png" />
     <Content Include="Image\HACHSHARA.png" />
     <Content Include="jquery\SearchJava.js" />
     <Content Include="main\csslogin.css" />
@@ -121,7 +123,9 @@
     <Content Include="bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="bootstrap\css\bootstrap.css" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="progressbar.js" />
     <Content Include="QuestionsAnswersMosad.aspx" />
+    <Content Include="Resultshatamarep.aspx" />
     <Content Include="SearchCourses.aspx" />
     <Content Include="UserCss.css" />
     <Content Include="Web.config" />
@@ -148,6 +152,13 @@
     </Compile>
     <Compile Include="CreateUser.aspx.designer.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoreshReceive.aspx.cs">
+      <DependentUpon>DoreshReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoreshReceive.aspx.designer.cs">
+      <DependentUpon>DoreshReceive.aspx</DependentUpon>
     </Compile>
     <Compile Include="General.Master.cs">
       <DependentUpon>General.Master</DependentUpon>
@@ -203,6 +214,13 @@
     </Compile>
     <Compile Include="QuestionsAnswersMosad.aspx.designer.cs">
       <DependentUpon>QuestionsAnswersMosad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Resultshatamarep.aspx.cs">
+      <DependentUpon>Resultshatamarep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resultshatamarep.aspx.designer.cs">
+      <DependentUpon>Resultshatamarep.aspx</DependentUpon>
     </Compile>
     <Compile Include="SearchCourses.aspx.cs">
       <DependentUpon>SearchCourses.aspx</DependentUpon>

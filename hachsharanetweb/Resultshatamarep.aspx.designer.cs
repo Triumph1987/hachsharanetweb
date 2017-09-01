@@ -10,25 +10,7 @@
 namespace hachsharanetweb {
     
     
-    public partial class WebForm2 {
-        
-        /// <summary>
-        /// circle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl circle;
-        
-        /// <summary>
-        /// Approve control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Approve;
+    public partial class Resultshatamarep {
         
         /// <summary>
         /// Results control.
