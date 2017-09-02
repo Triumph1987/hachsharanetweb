@@ -40,8 +40,26 @@ setInterval(GetClock,1000);
              });
              //});
          }
-         </script>
-         <script>
+       
+
+     function Confirm1() {
+
+             //$('.CreateButton').on('click', function () {
+
+             $.alert({
+                 title: 'הצלחה!',
+                 content: 'התשובה נשמרה במערכת',
+                 type: 'green',
+                 rtl: true,
+                 buttons: {
+                     confirm: {
+                         text: 'סגור',
+                     }
+                 },
+             });
+             //});
+         }
+
 
          function Error1() {
 
@@ -138,8 +156,9 @@ setInterval(GetClock,1000);
            <a class="navbar-brand" href="/HomePage.aspx">
         <img alt="Brand" style="height:39px; width:198px;" src="Image/HACHSHARA.PNG"/>
       </a>
-        <p class="navbar-text"><strong>שלום</strong> <asp:Label ID="showname" Text="" runat="server" /> </p>
-        <p id="Metpal" runat="server" class="navbar-text"><strong>מטפל כרגע ב:</strong> <asp:Label ID="FullName" Text="" runat="server" /> </p>
+        <p class="navbar-text"><strong>שלום</strong> <asp:Label ID="showname" Text="" runat="server" /> </p> 
+              <p id="Metpal" runat="server" class="navbar-text"><strong>מטפל כרגע ב:</strong> <asp:Label ID="FullName" Text="" runat="server" /> </p>
+
        
     </div>
   </div>

@@ -94,15 +94,6 @@ namespace hachsharanetweb {
         protected global::System.Web.UI.WebControls.RadioButtonList QuestionAnswer;
         
         /// <summary>
-        /// TextBox3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
-        
-        /// <summary>
         /// SaveAndMove control.
         /// </summary>
         /// <remarks>

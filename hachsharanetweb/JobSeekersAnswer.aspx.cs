@@ -79,5 +79,10 @@ namespace hachsharanetweb
         {
 
         }
+
+        protected void CheckMatch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HatamaResults.aspx");
+        }
     }
 }

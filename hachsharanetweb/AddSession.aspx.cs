@@ -116,8 +116,8 @@ namespace hachsharanetweb
                     //comm.CommandText = cmdString;
                     comm.Parameters.Add("@val1", SqlDbType.Int).Value = int.Parse(CourseIDText.Text);
                     comm.Parameters.Add("@val2", SqlDbType.Int).Value= int.Parse(SessionIDText.Text);
-                    comm.Parameters.Add("@val3", SqlDbType.DateTime).Value = DateTime.ParseExact(StartDateText.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture);
-                    comm.Parameters.Add("@val4", SqlDbType.DateTime).Value = DateTime.ParseExact(EndDateText.Text, "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                    comm.Parameters.Add("@val3", SqlDbType.DateTime).Value = DateTime.ParseExact(StartDateText.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                    comm.Parameters.Add("@val4", SqlDbType.DateTime).Value = DateTime.ParseExact(EndDateText.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
                     comm.Parameters.Add("@val5", SqlDbType.NVarChar).Value = SessionNameText.Text;
                     comm.Parameters.Add("@val6", SqlDbType.Int).Value = int.Parse(MaxParticipText.Text);
                     comm.Parameters.Add("@val7", SqlDbType.Int).Value = int.Parse(MinParticipText.Text);

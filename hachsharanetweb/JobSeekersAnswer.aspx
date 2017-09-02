@@ -98,7 +98,7 @@
      </div>
 </div>
     <br/>
-       <asp:Button ID="CheckMatch" runat="server" Text="הרץ מנגנון התאמה" class="btn btn-success" OnClick="SaveAndMove_Click" />
+       <asp:Button ID="CheckMatch" runat="server" Text="הרץ מנגנון התאמה" class="btn btn-success" OnClick="CheckMatch_Click" />
   
       </fieldset>
     </form>

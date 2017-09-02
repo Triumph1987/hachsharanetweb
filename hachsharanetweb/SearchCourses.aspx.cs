@@ -41,8 +41,8 @@ namespace hachsharanetweb
                     cmd.Parameters.Add("@CourseName", SqlDbType.NVarChar).Value = '%' + TextBox1.Text + '%';
                  //   con.Open();
                  //   GridView2.EmptyDataText = "No Records Found";
-                    GridView2.DataSource = cmd.ExecuteReader();
-                    GridView2.DataBind();
+                    GridView1.DataSource = cmd.ExecuteReader();
+                    GridView1.DataBind();
 
                     // Define the data adapter and fill the dataset 
                     //using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -57,7 +57,7 @@ namespace hachsharanetweb
             //GridView2.DataBind();
         }
 
-        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
 
             if (e.CommandName == "AddToCart")
@@ -68,9 +68,9 @@ namespace hachsharanetweb
 
                 // Retrieve the row that contains the button 
                 // from the Rows collection.
-                GridViewRow row = GridView2.Rows[index];
+                GridViewRow row = GridView1.Rows[index];
 
-                Session["CourseNum"] = row.Cells[0];
+                Session["CourseNum"] = row.Cells[0].ToString();
                 Response.Redirect("AddCourse.aspx");
             }
 

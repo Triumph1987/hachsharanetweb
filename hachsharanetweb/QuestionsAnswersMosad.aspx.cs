@@ -98,7 +98,7 @@ namespace hachsharanetweb
                         if (CourseExists == null) {
                             
                             comm.ExecuteNonQuery();
-                            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Confirm();", true);
+                            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Confirm1();", true);
                         }
                         Session["Qnum"] = int.Parse(Session["Qnum"].ToString()) + 1;
                         var Questions = (from QItems in dc.MatchingQuestions

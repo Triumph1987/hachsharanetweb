@@ -11,7 +11,11 @@ namespace hachsharanetweb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Metam.Visible = false;
+            if (Session["UserType"].ToString() == "יועץ")
+            {
+                Metam.Visible = true;
+            }
         }
     }
 }

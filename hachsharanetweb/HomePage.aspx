@@ -6,7 +6,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 <h1 class="page-head" dir="rtl">שולחן עבודה</h1>
-    <div class="container">
+     <p dir="rtl" style="font-size:23px";>
+    ברוכים הבאים למערכת הכשרה.נט
+    להתחלת עבודה יש לבחור את הפריט המבוקש בצד ימין
+         </p>
+    <p dir="rtl" style="font-size:20px";> כרגע יש 5 משתמשים פעילים במערכת</p>
+    <div id="Metam" runat="server" class="container">
     	<div class="row">
 			<div class="col-md-5">
 				<div class="panel panel-primary">
