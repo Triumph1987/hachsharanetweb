@@ -79,6 +79,40 @@ setInterval(GetClock,1000);
                  //});
              }
 
+             function Error3() {
+
+                 //$('.CreateButton').on('click', function () {
+
+                 $.alert({
+                     title: 'אנא הזן תעודת זהות תקינה ',
+                     content: '',
+                     type: 'red',
+                     rtl: true,
+                     buttons: {
+                         confirm: {
+                             text: 'הזן שוב',
+                         }
+                     },
+                 });
+                 //});
+             }
+
+             function Error4() {
+
+                 //$('.CreateButton').on('click', function () {
+
+                 $.alert({
+                     title: 'אנא הזן תעודת זהות תקינה ',
+                     type: 'red',
+                     rtl: true,
+                     buttons: {
+                         confirm: {
+                             text: 'הזן שוב',
+                         }
+                     },
+                 });
+                 //});
+             }
     </script>
 
 
@@ -105,6 +139,7 @@ setInterval(GetClock,1000);
         <img alt="Brand" style="height:39px; width:198px;" src="Image/HACHSHARA.PNG"/>
       </a>
         <p class="navbar-text"><strong>שלום</strong> <asp:Label ID="showname" Text="" runat="server" /> </p>
+        <p id="Metpal" runat="server" class="navbar-text"><strong>מטפל כרגע ב:</strong> <asp:Label ID="FullName" Text="" runat="server" /> </p>
        
     </div>
   </div>
@@ -131,8 +166,8 @@ setInterval(GetClock,1000);
   
             <ul id="menu-content" class="menu-content collapse out">
 
-
-                <li  data-toggle="collapse" data-target="#CourseMan" class="collapsed">
+                <span id="NotMossad1" runat="server">
+                <li data-toggle="collapse" data-target="#CourseMan" class="collapsed">
                   <a href="#"> ניהול הכשרות <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="CourseMan">
@@ -157,8 +192,9 @@ setInterval(GetClock,1000);
                   <a href="#"> ניהול מוסדות הכשרה <span class="arrow"></span></a>
                 </li>  
                 <ul class="sub-menu collapse" id="InstMan">
-                  <li><a href="#">עדכון מוסד</a></li>
-                  <li><a href="#">יצירת מוסד</a></li>
+                    <li><a href="/mosdot.aspx">יצירת מוסד</a></li>
+                  <li><a href="/UpdateMossad.aspx">עדכון מוסד</a></li>
+                  
                     
                             </ul>
 
@@ -172,7 +208,8 @@ setInterval(GetClock,1000);
                      
                 </ul>
 
-              
+              </span>
+                 <span id="Mossad" runat="server">
                     <li data-toggle="collapse" data-target="#InstitueOwn" class="collapsed">
                   <a href="#"> מוסד הכשרה <span class="arrow"></span></a>
                 </li>
@@ -183,7 +220,10 @@ setInterval(GetClock,1000);
                     <li><a href="QuestionsAnswersMosad.aspx">מענה על שאלות התאמה</a></li>
                     <li><a href="#">סטטוס בקשות הוספה</a></li>
            
+
                 </ul>
+                     </span>
+                <span id="AdminOnly" runat="server">
                   <li data-toggle="collapse" data-target="#General" class="collapsed">
                   <a href="#"> ניהול מערכת <span class="arrow"></span></a>
                 </li>
@@ -193,8 +233,9 @@ setInterval(GetClock,1000);
                   <li><a href="#">הגדרות כלליות</a></li>
            
                 </ul>
-
+                     </span>
             </ul>
+           
      </div>
 
    

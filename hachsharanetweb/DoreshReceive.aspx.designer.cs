@@ -13,13 +13,13 @@ namespace hachsharanetweb {
     public partial class DoreshReceive {
         
         /// <summary>
-        /// JobSIDText control.
+        /// IDText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox JobSIDText;
+        protected global::System.Web.UI.WebControls.TextBox IDText;
         
         /// <summary>
         /// Approve control.
@@ -40,103 +40,121 @@ namespace hachsharanetweb {
         protected global::System.Web.UI.WebControls.Button Clean;
         
         /// <summary>
-        /// JobSFullnameText control.
+        /// AfterData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox JobSFullnameText;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AfterData;
         
         /// <summary>
-        /// TextBox1 control.
+        /// LastnameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox LastnameText;
         
         /// <summary>
-        /// TextBox3 control.
+        /// FirstnameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox FirstnameText;
         
         /// <summary>
-        /// TextBox4 control.
+        /// StreetNumText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox StreetNumText;
         
         /// <summary>
-        /// TextBox5 control.
+        /// StreetText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox StreetText;
         
         /// <summary>
-        /// TextBox7 control.
+        /// CityText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox CityText;
         
         /// <summary>
-        /// TextBox2 control.
+        /// GenderText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox GenderText;
         
         /// <summary>
-        /// TextBox6 control.
+        /// BirthDateText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox BirthDateText;
         
         /// <summary>
-        /// TextBox8 control.
+        /// CourseRefuseText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox CourseRefuseText;
         
         /// <summary>
-        /// TextBox9 control.
+        /// DistrictText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox DistrictText;
         
         /// <summary>
-        /// TextBox10 control.
+        /// DateRunText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox DateRunText;
+        
+        /// <summary>
+        /// CourseActiveText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CourseActiveText;
+        
+        /// <summary>
+        /// Button4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
         /// Button1 control.

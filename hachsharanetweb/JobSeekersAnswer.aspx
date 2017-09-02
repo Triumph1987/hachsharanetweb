@@ -12,36 +12,20 @@
 <form class="form-horizontal" dir="rtl" runat="server">
 
 <fieldset>
+    <div id="EnterDet" runat="server">
     <div class="form-group">
     <label class="col-md-4 control-label" for="JobSIDText">מספר תעודת זהות</label>  
   <div class="col-md-4">
- <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
+      <div class="input-group">
+    <asp:TextBox id="IDText" runat="server"  name="IDText" type="text" placeholder="מספר תעודת זהות" class="form-control input-md required"  Visible="True" MaxLength="9"></asp:TextBox>
+                 <asp:CompareValidator runat="server" Operator="DataTypeCheck" Type="Integer" 
+ ControlToValidate="IDText" ErrorMessage="יש להזין מספרים בלבד" style="color:red" />
        </div>
-    <asp:TextBox id="JobSIDText" runat="server"  name="JobSIDText" type="text" placeholder="מספר תעודת זהות" class="form-control input-md required"  Visible="True"></asp:TextBox>
-      </div>
+          </div>
 
         </div>
 
   
-</div>
-
-        <div class="form-group">
-    <label class="col-md-4 control-label" for="JobSFullnameText">שם מלא</label>  
-  <div class="col-md-4">
- <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
-    <asp:TextBox id="JobSFullnameText" runat="server"  name="JobSFullnameText" type="text" placeholder="שם מלא" class="form-control input-md required"  Visible="True"></asp:TextBox>
-      </div>
-
-        </div>
-            </div>
-
 
               <div  class="form-group">
   <label class="col-md-4 control-label" ></label>  
@@ -51,16 +35,21 @@
   
         </div>
 </div>
-  
+        </div>
+          <div class="form-group">
+    <label class="col-md-4 control-label" for="JobSFullnameText">שם מלא</label>  
+  <div class="col-md-4">
+        <div class="input-group">
+    <asp:TextBox id="JobSFullnameText" runat="server"  name="JobSFullnameText" type="text" placeholder="שם מלא" class="form-control input-md required"  Visible="True" ReadOnly="True"></asp:TextBox>
+            </div>
+      </div>
+
+        </div>
 
 <div class="form-group">
     <label class="col-md-4 control-label" for="QuestionID">מזהה שאלה</label>  
   <div class="col-md-4">
  <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
     <asp:TextBox id="QuestionID" runat="server"  name="QuestionID" type="text" placeholder="מזהה שאלה" class="form-control input-md required"  Visible="True" ReadOnly="True" OnTextChanged="QuestionID_TextChanged"></asp:TextBox>
       </div>
 
@@ -75,10 +64,6 @@
   <label class="col-md-4 control-label" for="QuestionText">שאלה</label>  
   <div class="col-md-4">
  <div class="input-group">
-       <div class="input-group-addon">
-        <i class="fa fa-user">
-        </i>
-       </div>
     <asp:TextBox id="QuestionText" runat="server"  name="QuestionText" type="text" placeholder="שאלה" class="form-control input-md" ReadOnly="True"></asp:TextBox>
       </div>
 
@@ -119,11 +104,10 @@
     </form>
       </div>
     </div>
-        </div>
 
 
         
-
+    </div>
 
 
 

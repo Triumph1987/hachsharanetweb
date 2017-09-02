@@ -39,7 +39,7 @@
                      	
                      	<nav class="nav-tabs">
                      		<ul class="nav nav-pills pull-left">
-                                <li class="card-action"><a href="#">צור דוח</a></li>
+                                <li class="card-action"><a href="/OpenCourseRep.aspx">צור דוח</a></li>
                                 
                             </ul>
                      		
@@ -87,7 +87,7 @@
                      	
                      	<nav class="nav-tabs">
                      		<ul class="nav nav-pills pull-left">
-                                <li class="card-action"><a href="#">צור דוח</a></li>
+                                <li class="card-action"><a href="/Resultshatamarep.aspx">צור דוח</a></li>
 
                             </ul>
                      		
@@ -113,7 +113,7 @@
                      	
                      	<nav class="nav-tabs">
                      		<ul class="nav nav-pills pull-left">
-                                <li class="card-action"><a href="#">צור דוח</a></li>
+                                <li class="card-action"><a href="/MosdotRep.aspx">צור דוח</a></li>
                                 
                             </ul>
                      		

@@ -26,6 +26,7 @@ namespace hachsharanetweb
             {
                 Session["UserName"] = User.FirstName.ToString();
                 Session["Institute"] = User.InstituteID.ToString();
+                Session["UserType"] = User.Type.ToString();
                 Response.Redirect("HomePage.aspx");
             }
             else

@@ -10,78 +10,78 @@
 namespace hachsharanetweb {
     
     
-    public partial class General {
+    public partial class Mosdot {
         
         /// <summary>
-        /// head control.
+        /// Div5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div5;
         
         /// <summary>
-        /// showname control.
+        /// InsIDText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label showname;
+        protected global::System.Web.UI.WebControls.TextBox InsIDText;
         
         /// <summary>
-        /// Metpal control.
+        /// Div2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Metpal;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div2;
         
         /// <summary>
-        /// FullName control.
+        /// InstText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FullName;
+        protected global::System.Web.UI.WebControls.TextBox InstText;
         
         /// <summary>
-        /// NotMossad1 control.
+        /// AnswerDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NotMossad1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AnswerDiv;
         
         /// <summary>
-        /// Mossad control.
+        /// ApprovedInst control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Mossad;
+        protected global::System.Web.UI.WebControls.RadioButtonList ApprovedInst;
         
         /// <summary>
-        /// AdminOnly control.
+        /// CreateButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AdminOnly;
+        protected global::System.Web.UI.WebControls.Button CreateButton;
         
         /// <summary>
-        /// ContentPlaceHolder3 control.
+        /// SearchAgain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
+        protected global::System.Web.UI.WebControls.Button SearchAgain;
     }
 }

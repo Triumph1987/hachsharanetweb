@@ -93,6 +93,9 @@
     <Content Include="main\SearchCss.css" />
     <Content Include="MatchingQuestions.aspx" />
     <Content Include="MatchingQuestionsDB.aspx" />
+    <Content Include="Mosdot.aspx" />
+    <Content Include="MosdotRep.aspx" />
+    <Content Include="OpenCourseRep.aspx" />
     <Content Include="packages.config" />
     <Content Include="General.Master" />
     <Content Include="bootstrap\css\bootstrap-theme.css.map" />
@@ -127,6 +130,7 @@
     <Content Include="QuestionsAnswersMosad.aspx" />
     <Content Include="Resultshatamarep.aspx" />
     <Content Include="SearchCourses.aspx" />
+    <Content Include="UpdateMossad.aspx" />
     <Content Include="UserCss.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -207,6 +211,27 @@
     <Compile Include="MatchingQuestionsDB.aspx.designer.cs">
       <DependentUpon>MatchingQuestionsDB.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mosdot.aspx.cs">
+      <DependentUpon>Mosdot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mosdot.aspx.designer.cs">
+      <DependentUpon>Mosdot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MosdotRep.aspx.cs">
+      <DependentUpon>MosdotRep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MosdotRep.aspx.designer.cs">
+      <DependentUpon>MosdotRep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OpenCourseRep.aspx.cs">
+      <DependentUpon>OpenCourseRep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OpenCourseRep.aspx.designer.cs">
+      <DependentUpon>OpenCourseRep.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestionsAnswersMosad.aspx.cs">
       <DependentUpon>QuestionsAnswersMosad.aspx</DependentUpon>
@@ -249,6 +274,13 @@
     </Compile>
     <Compile Include="CreateReports.aspx.designer.cs">
       <DependentUpon>CreateReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMossad.aspx.cs">
+      <DependentUpon>UpdateMossad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateMossad.aspx.designer.cs">
+      <DependentUpon>UpdateMossad.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

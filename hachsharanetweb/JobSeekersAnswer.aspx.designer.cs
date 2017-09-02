@@ -13,22 +13,22 @@ namespace hachsharanetweb {
     public partial class WebForm1 {
         
         /// <summary>
-        /// JobSIDText control.
+        /// EnterDet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox JobSIDText;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl EnterDet;
         
         /// <summary>
-        /// JobSFullnameText control.
+        /// IDText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox JobSFullnameText;
+        protected global::System.Web.UI.WebControls.TextBox IDText;
         
         /// <summary>
         /// Approve control.
@@ -47,6 +47,15 @@ namespace hachsharanetweb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Clean;
+        
+        /// <summary>
+        /// JobSFullnameText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox JobSFullnameText;
         
         /// <summary>
         /// QuestionID control.
